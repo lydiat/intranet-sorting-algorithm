@@ -1,36 +1,157 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js" lang="">
+
 <head>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/darkly/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/main.css">
 
-    <!-- JS -->
-    <!-- load angular, nganimate, and ui-router -->
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.min.js"></script>
-    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.3.js"></script>
-
-    <script src="app.js"></script>
-    
+  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-<body ng-app="formApp">
 
-<!-- views will be injected here -->
-<div class="container">
-    <div ui-view></div>
-</div>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
 
-<!--<div class="row">
-    <div class="col-sm-8 col-sm-offset-2">
-    <div class="jumbotron text-muted text-center">
-       <!-- <p><a href="http://scotch.io/tutorials/javascript/angularjs-multi-step-form-using-ui-router">Create a Multi-Step Form Using Angular and UI-Router</a></p>
+        <a class="navbar-brand" href="#">Intranet News Algorithm</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+
+      </div>
+      <!--/.navbar-collapse -->
     </div>
+  </nav>
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1>&nbsp;</h1>
+
+      <form>
+
+
+        <div class="form-group">
+          <label for="date">Date</label>
+          <div class="input-append date" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+            <input class="span2" size="16" type="text" id="dp" value="12-02-2012">
+            <span class="add-on"><i class="icon-calendar"></i></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="organization">Organization</label>
+          <select id="organization" name="organization" class="form-control">
+            <option value="1">GPA</option>
+            <option value="2">Enterprise O&T</option>
+            <option value="3">GCB</option>
+            <option value="4">Retail Services</option>
+            <option value="5">GCB O&T</option>
+            <option value="6">CMPC</option>
+            <option value="7">Enterprise Infrastructure</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="organization">Organization</label>
+          <select id="organization" name="organization" class="form-control">
+            <option value="1">UK</option>
+            <option value="2">US</option>
+            <option value="3">Canada</option>
+            <option value="4">India</option>
+            <option value="5">Malaysia</option>
+            <option value="6">Hong Kong</option>
+          </select>
+        </div>
+
+
+
+  <div class="form-group row">
+
+    <div class="form-group col-xs-2">
+      <label for="date-tweak">Date</label>
+      <input type="text" class="form-control" value="1"  data-bind="value:replyNumber" name="date-tweak">
     </div>
-</div>-->
+
+    <div class="form-group col-xs-2">
+      <label for="rank-tweak">Rank</label>
+      <input type="text" class="form-control" value="1" data-bind="value:replyNumber" name="rank-tweak" >
+    </div>
+
+    <div class="form-group col-xs-2">
+      <label for="global-tweak">Global</label>
+      <input type="text" class="form-control" value="2.5" data-bind="value:replyNumber" name="global-tweak" >
+    </div>
+
+    <div class="form-group col-xs-2">
+      <label for="regional-tweak">Regional</label>
+      <input type="text" class="form-control" value="1" data-bind="value:replyNumber" name="regional-tweak" >
+    </div>
+
+    <div class="form-group col-xs-2">
+      <label for="country-tweak">Country</label>
+      <input type="text" class="form-control" value="2" data-bind="value:replyNumber" name="country-tweak" >
+    </div>
+
+    <div class="form-group col-xs-2">
+      <label for="level-tweak">Segment</label>
+      <input type="text" class="form-control" value="-1" data-bind="value:replyNumber" name="level-tweak">
+    </div>
+  </div>
+
+
+      </form>
+
+      <hr>
+      <p><a class="btn btn-primary btn" href="#" role="button">Old Algorithm</a></p>
+      <p><a class="btn btn-primary btn" href="#" role="button">New Algorithm</a></p>
+    </div>
+  </div>
+<!--
+  <div class="container">
+    <!-- Example row of columns 
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Heading</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>Heading</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>Heading</h2>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      </div>
+    </div>
+-->
+    <hr>
+
+    <footer>
+    </footer>
+  </div>
+  <!-- /container -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')
+  </script>
+
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/vendor/bootstrap-datepicker.js"></script>
+
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
 
 </body>
+
 </html>

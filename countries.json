@@ -1,0 +1,78 @@
+[
+  {
+    "TargetID":"GLOBAL",
+    "TargetDesc":"Global"
+  },
+  {
+    "TargetID":"LATM",
+    "TargetDesc":"Latin America"
+  },
+  {
+    "TargetID":"EMEA",
+    "TargetDesc":"EMEA"
+  },
+  {
+    "TargetID":"LKA",
+    "TargetDesc":"Sri Lanka"
+  },
+  {
+    "TargetID":"CAN",
+    "TargetDesc":"CAN"
+  },
+  {
+    "TargetID":"USA",
+    "TargetDesc":"United States"
+  },
+  {
+    "TargetID":"APAC",
+    "TargetDesc":"APAC or Asia Pacific"
+  },
+  {
+    "TargetID":"GBR",
+    "TargetDesc":"United Kingdom or GBR"
+  },
+  {
+    "TargetID":"CHN",
+    "TargetDesc":"China"
+  },
+  {
+    "TargetID":"VNM",
+    "TargetDesc":"Vietnam"
+  },
+  {
+    "TargetID":"THA",
+    "TargetDesc":"Thailand"
+  },
+  {
+    "TargetID":"HKG",
+    "TargetDesc":"Hong Kong"
+  },
+  {
+    "TargetID":"MEX",
+    "TargetDesc":"MEX"
+  },
+  {
+    "TargetID":"PHL",
+    "TargetDesc":"Philippines"
+  },
+  {
+    "TargetID":"AUS",
+    "TargetDesc":"Australia or Australia & New Zealand"
+  },
+  {
+    "TargetID":"SGP",
+    "TargetDesc":"Singapore"
+  },
+  {
+    "TargetID":"USA",
+    "TargetDesc":"USA"
+  },
+  {
+    "TargetID":"CAN",
+    "TargetDesc":"Canada"
+  },
+  {
+    "TargetID":"IDN",
+    "TargetDesc":"Indonesia"
+  }
+]

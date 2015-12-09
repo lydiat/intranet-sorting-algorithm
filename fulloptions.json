@@ -1,0 +1,166 @@
+[
+  {
+    "TargetID":"GLOBAL",
+    "TargetDesc":"Global"
+  },
+  {
+    "TargetID":"4462",
+    "TargetDesc":"Global Consumer Banking [L4] or GCB"
+  },
+  {
+    "TargetID":"9905249",
+    "TargetDesc":"Global Gov Affairs [L6] or Global Gov Affairs"
+  },
+  {
+    "TargetID":"5246",
+    "TargetDesc":"Digital Communications [L8]"
+  },
+  {
+    "TargetID":"5497",
+    "TargetDesc":"Enterprise O&T [L4] or O & T "
+  },
+  {
+    "TargetID":"LATM",
+    "TargetDesc":"Latin America"
+  },
+  {
+    "TargetID":"9922073",
+    "TargetDesc":"O&T One Citi Country Managemen or Latin America Operations & Technology"
+  },
+  {
+    "TargetID":"12522",
+    "TargetDesc":"Chief Technology Office or Office of the CTO"
+  },
+  {
+    "TargetID":"EMEA",
+    "TargetDesc":"EMEA"
+  },
+  {
+    "TargetID":"LKA",
+    "TargetDesc":"Sri Lanka"
+  },
+  {
+    "TargetID":"2",
+    "TargetDesc":"Citicorp [L2]"
+  },
+  {
+    "TargetID":"20497",
+    "TargetDesc":"GCB O&T [L7] or Consumer O & T"
+  },
+  {
+    "TargetID":"9914384",
+    "TargetDesc":"Mortgages"
+  },
+  {
+    "TargetID":"CAN",
+    "TargetDesc":"CAN"
+  },
+  {
+    "TargetID":"3",
+    "TargetDesc":"Institutional Clients Group [L"
+  },
+  {
+    "TargetID":"USA",
+    "TargetDesc":"United States"
+  },
+  {
+    "TargetID":"APAC",
+    "TargetDesc":"APAC or Asia Pacific"
+  },
+  {
+    "TargetID":"6760",
+    "TargetDesc":"CATE [L6]"
+  },
+  {
+    "TargetID":"GBR",
+    "TargetDesc":"United Kingdom or GBR"
+  },
+  {
+    "TargetID":"CHN",
+    "TargetDesc":"China"
+  },
+  {
+    "TargetID":"VNM",
+    "TargetDesc":"Vietnam"
+  },
+  {
+    "TargetID":"4463",
+    "TargetDesc":"Cards [L5] or Cards"
+  },
+  {
+    "TargetID":"THA",
+    "TargetDesc":"Thailand"
+  },
+  {
+    "TargetID":"HKG",
+    "TargetDesc":"Hong Kong"
+  },
+  {
+    "TargetID":"MEX",
+    "TargetDesc":"MEX"
+  },
+  {
+    "TargetID":"PHL",
+    "TargetDesc":"Philippines"
+  },
+  {
+    "TargetID":"AUS",
+    "TargetDesc":"Australia or Australia & New Zealand"
+  },
+  {
+    "TargetID":"20485",
+    "TargetDesc":"O&T Risk and Control"
+  },
+  {
+    "TargetID":"4586",
+    "TargetDesc":"Retail Banking"
+  },
+  {
+    "TargetID":"9908839",
+    "TargetDesc":"Retail Services"
+  },
+  {
+    "TargetID":"9912217",
+    "TargetDesc":"Commercial or Commercial [L6]"
+  },
+  {
+    "TargetID":"SGP",
+    "TargetDesc":"Singapore"
+  },
+  {
+    "TargetID":"USA",
+    "TargetDesc":"USA"
+  },
+  {
+    "TargetID":"16312",
+    "TargetDesc":"Enterprise Infrastructure"
+  },
+  {
+    "TargetID":"CAN",
+    "TargetDesc":"Canada"
+  },
+  {
+    "TargetID":"23623",
+    "TargetDesc":"Third Party Management"
+  },
+  {
+    "TargetID":"IDN",
+    "TargetDesc":"Indonesia"
+  },
+  {
+    "TargetID":"16803",
+    "TargetDesc":"Global Public Affairs [L5]"
+  },
+  {
+    "TargetID":"9904974",
+    "TargetDesc":"ICG Risk "
+  },
+  {
+    "TargetID":"3891",
+    "TargetDesc":"Treasury and Trade Solutions ["
+  },
+  {
+    "TargetID":"6808",
+    "TargetDesc":"Citi Global Program Management"
+  }
+]
