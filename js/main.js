@@ -15,6 +15,7 @@ $( document ).ready(function() {
 	$('.new').on('click', function(){
 		var formNumbers = $( "form" ).serialize();
 
+		$('.algorithm').html('');
 
 		$.each(formNumbers.split('&'), function (index, elem) {
 			var vals = elem.split('=');
@@ -22,7 +23,10 @@ $( document ).ready(function() {
 				vals[1] = dateToTimerank(vals[1]);
 			}
 			console.log(vals[0] + " = " + vals[1]);
+
+			$('.algorithm').append(vals[0] + " = " + vals[1] + "<br />");
 		});
+		$('.parse').fadeIn();
 
 	});
 
