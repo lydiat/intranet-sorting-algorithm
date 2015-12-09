@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-// init datepicker
+  // init datepicker
   $('#dp').datepicker({
     format: "mm/dd/yyyy",
     endDate: "Today",
@@ -8,10 +8,14 @@ $(document).ready(function() {
     todayHighlight: true
   });
 
-var countryCode = 'hkg';
-var orgCode = '4462';
+  //dummy codes for now
+  var countryCode = 'hkg';
+  var orgCode = '4462';
 
-// bypass normal form submission
+  var rankedNews = {};
+  var sortedRankedNews = {};
+
+  // bypass normal form submission
   var form = document.getElementById('paraform');
   var formSubmit = form.submit; //save reference to original submit function
   form.onsubmit = function(e) {
@@ -19,11 +23,11 @@ var orgCode = '4462';
     return false;
   };
 
-//$('.parse').on('click', function(){
-	sortNews();
-//})
+  //$('.parse').on('click', function(){
+  rankNewsArticles();
+  //})
 
-// tally form data and display
+  // tally form data and display
   function runForm() {
     var formNumbers = $("form").serialize();
     $('.algorithm').html('');
@@ -32,11 +36,11 @@ var orgCode = '4462';
       if (vals[0] == 'date') {
         vals[1] = dateToTimerank(vals[1]);
       }
-      if (vals[0] == 'organization'){
-      	var orgCode = vals[1];
+      if (vals[0] == 'organization') {
+        var orgCode = vals[1];
       }
-      if(vals[0] == 'country'){
-      	var countryCode = vals[1].toLowerCase();
+      if (vals[0] == 'country') {
+        var countryCode = vals[1].toLowerCase();
 
       }
       console.log(vals[0] + " = " + vals[1]);
@@ -47,13 +51,12 @@ var orgCode = '4462';
     $('.parse').fadeIn();
   };
 
-
-// parse date into ranking
+  // parse date into ranking
   function dateToTimerank(dateString) {
 
     var dateParts = dateString.split(/[.,\/ -]/),
 
-    date = new Date(dateParts[2], parseInt(dateParts[0], 10) - 1, dateParts[1], 0, 0, 0, 0);
+      date = new Date(dateParts[2], parseInt(dateParts[0], 10) - 1, dateParts[1], 0, 0, 0, 0);
     var chosenTimestamp = date.getTime() / 1000;
 
     var todayTimeStamp = new Date();
@@ -71,49 +74,79 @@ var orgCode = '4462';
     }
     return rank;
   }
-	
-	var myNewArray = {};
 
   // get news and create
-function sortNews(){
-	$.getJSON("shortnews.json", function(json) {
-		$.each(json, function(i, val) {
-			//set rank value
-			var valRank = val["Rank"];
-			if(valRank <= 3){
-				valRank = (valRank * -1) + 4;
-			} else {
-				valRank = 0;
-			}
+  function rankNewsArticles() {
+    $.getJSON("shortnews.json", function(json) {
+      $.each(json, function(i, val) {
+        //set rank value
+        var valRank = val["Rank"];
+        if (valRank <= 3) {
+          valRank = (valRank * -1) + 4;
+        } else {
+          valRank = 0;
+        }
 
-			//set date rank value
-			var valDate = val["SourceDate"];
-			var valDate = dateToTimerank(valDate);
-			var valDate = Math.round(valDate);
+        //set date rank value
+        var valDate = val["SourceDate"];
+        var valDate = dateToTimerank(valDate);
+        var valDate = Math.round(valDate);
 
+        //set target rank value
+        var valTarget = val["TargetID"].toLowerCase();
+        //if global give a rank of 2
+        if (valTarget == 'global') {
+          valTarget = 2;
+        }
+        //if target ID matches country or org, give rank of 1
+        else if (valTarget == countryCode || valTarget == orgCode) {
+          valTarget = 1;
+        } else {
+          valTarget = 0;
+        }
 
-			//set target rank value
-			var valTarget = val["TargetID"].toLowerCase();
-			//if global give a rank of 2
-			if(valTarget == 'global'){
-				valTarget = 2;
-			} 
-			//if target ID matches country or org, give rank of 1
-			else if (valTarget == countryCode || valTarget == orgCode){
-				valTarget = 1;
-			}
-			else {
-				valTarget = 0;
-			}
+        //add values and create new object with them as keys
+        total = valRank + valDate + valTarget;
+        rankedNews[total + "-" + i] = val;
+      });
 
-			total = valRank + valDate + valTarget;
-			console.log(total);
+      sortRankedNews(rankedNews);
+    });
+  }
 
-			myNewArray[total] = val;
+  function sortRankedNews(articles) {
+  	var keys = [];
 
-		});
-	console.log(myNewArray);
-	});
-}
+  	for(article in articles){
+		if (articles.hasOwnProperty(article)) {
+			keys.push(article);
+		}
+  	}
+
+	keys.sort().reverse();
+	var len = keys.length;
+
+	for (i = 0; i < len; i++) {
+	  k = keys[i];
+	  sortedRankedNews[k] = articles[k];
+	}
+	displayInTemplate(sortedRankedNews);
+  }
+
+  function displayInTemplate(articles){
+  	var html;
+  	$.each(articles, function(i, val){
+  		title = val['Headline'];
+  		date = val['SourceDate'];
+  		text = val['AbstractNews'];
+
+  		html += "<h4>"+title+"</h4>";
+  		html += "<span class='date'>"+date+"</span>";
+  		html += "<p class='text'>"+text+"</p>";
+  		html += "<a href='#'>Read More</a>";
+
+  	});
+  	$('.parsed').html(html);
+  }
 
 });

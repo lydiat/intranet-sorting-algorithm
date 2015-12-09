@@ -7,7 +7,7 @@
     "SourceDate":"12/09/2015"
   },
   {
-    "Rank":"999",
+    "Rank":"2",
     "Headline":"CLONE - Message from Steve Macke: \"It's Alive\"",
     "TargetID":"4462",
     "TargetDesc":"Global Consumer Banking [L4]",
@@ -63,6 +63,14 @@
     "SourceDate":"11/08/2015"
   },
   {
+    "Rank":"999",
+    "Headline":"New Mexico Secretary of State accused of embezzlement, money laundering",
+    "TargetID":"9905249",
+    "TargetDesc":"Global Gov Affairs [L6]",
+    "AbstractNews":"New Mexico Secretary of State Dianna Duran was charged with 64 counts, including fraud, embezzlement and conspiracy.",
+    "SourceDate":"11/08/2015"
+  },
+    {
     "Rank":"999",
     "Headline":"New Mexico Secretary of State accused of embezzlement, money laundering",
     "TargetID":"9905249",
