@@ -1,5 +1,5 @@
 [{
-    "Rank":"999",
+    "Rank":"3",
     "Headline":"J.D. Power and Associates U.S. Credit Card Satisfaction Study Results",
     "TargetID":"GLOBAL",
     "TargetDesc":"Global",
@@ -8,7 +8,7 @@
   },
   {
     "Rank":"2",
-    "Headline":"CLONE - Message from Steve Macke: \"It's Alive\"",
+    "Headline":"Message from Steve Macke: \"It's Alive\"",
     "TargetID":"4462",
     "TargetDesc":"Global Consumer Banking [L4]",
     "AbstractNews":"Head of Global Collections Steve Macke congratulates the NA Collections Procedures team for their efforts in completing the first phase of transitioning procedures and documents to the new Knowledge Hub.",
@@ -16,7 +16,7 @@
   },
   {
     "Rank":"1",
-    "Headline":"CLONE - Citibank Launches Citi Priority for the Emerging Affluent in Hong Kong",
+    "Headline":"Citibank Launches Citi Priority for the Emerging Affluent in Hong Kong",
     "TargetID":"GLOBAL",
     "TargetDesc":"Global",
     "AbstractNews":"Citibank announced the launch of Citi Priority, a new value proposition targeting the emerging affluent, with a digitalized, convenient, simple and efficient banking experience to equip aspirational and financially progressive clients.",
@@ -31,7 +31,7 @@
     "SourceDate":"12/03/2015"
   },
   {
-    "Rank":"999",
+    "Rank":"2",
     "Headline":"WV Gov. Tomblin appoints Acting Commission of Division of Financial Institutions ",
     "TargetID":"9905249",
     "TargetDesc":"Global Gov Affairs [L6]",
@@ -39,7 +39,7 @@
     "SourceDate":"12/08/2015"
   },
   {
-    "Rank":"999",
+    "Rank":"1",
     "Headline":"Congress will return from their August Recess to a full schedule in September.  ",
     "TargetID":"9905249",
     "TargetDesc":"Global Gov Affairs [L6]",
@@ -47,7 +47,7 @@
     "SourceDate":"12/08/2015"
   },
   {
-    "Rank":"999",
+    "Rank":"2",
     "Headline":"Virginia Attorney General Herring will seek second term, not run for governor",
     "TargetID":"9905249",
     "TargetDesc":"Global Gov Affairs [L6]",
@@ -55,7 +55,7 @@
     "SourceDate":"12/08/2015"
   },
   {
-    "Rank":"999",
+    "Rank":"1",
     "Headline":"Illinois Gov. vetoes data breach bill supported by AG Madigan",
     "TargetID":"9905249",
     "TargetDesc":"Global Gov Affairs [L6]",
@@ -63,7 +63,7 @@
     "SourceDate":"11/08/2015"
   },
   {
-    "Rank":"999",
+    "Rank":"3",
     "Headline":"New Mexico Secretary of State accused of embezzlement, money laundering",
     "TargetID":"9905249",
     "TargetDesc":"Global Gov Affairs [L6]",
@@ -71,7 +71,7 @@
     "SourceDate":"11/08/2015"
   },
     {
-    "Rank":"999",
+    "Rank":"2",
     "Headline":"New Mexico Secretary of State accused of embezzlement, money laundering",
     "TargetID":"9905249",
     "TargetDesc":"Global Gov Affairs [L6]",
@@ -79,27 +79,27 @@
     "SourceDate":"11/08/2015"
   },
   {
-    "Rank":"999",
+    "Rank":"2",
     "Headline":"Citi Pride Hong Kong on Campus",
     "TargetID":"HKG",
     "TargetDesc":"Hong Kong",
     "AbstractNews":"Citi Pride Hong Kong were proud sponsors of the Inclusion Recruitment Conference along with Goldman Sachs, Barclays, Morgan Stanley, Standard Chartered, JP Morgan to name a few. ",
-    "SourceDate":"11/12/2015"
+    "SourceDate":"12/02/2015"
   },
    {
-    "Rank":"999",
+    "Rank":"1",
     "Headline":"The Search for Growth and Stability Amidst Deflation and Divergence",
     "TargetID":"EMEA",
     "TargetDesc":"EMEA",
     "AbstractNews":"Citi�s Global Chief Economist, Willem Buiter and Head of Emerging Market Economics, David Lubin spoke at a thought leadership panel event co-hosted by Citi and the FT during the IMF / World Bank annual meeting in Lima, Peru. ",
-    "SourceDate":"11/10/2015"
+    "SourceDate":"12/04/2015"
   },
   {
-    "Rank":"999",
+    "Rank":"3",
     "Headline":"Asia Pacific CEO Francisco Aristeguieta Calls on HKMA Chief ",
     "TargetID":"APAC",
     "TargetDesc":"APAC",
     "AbstractNews":"Citi Asia Pacific CEO Francisco Aristeguieta paid a courtesy call on Hong Kong Monetary Authority (HKMA) Chief Executive Norman Chan last week. ",
-    "SourceDate":"11/11/2015"
+    "SourceDate":"12/01/2015"
   }
   ]

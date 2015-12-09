@@ -8,12 +8,13 @@ $(document).ready(function() {
     todayHighlight: true
   });
 
-  //dummy codes for now
-  var countryCode = 'hkg';
-  var orgCode = '4462';
 
+
+  // define vars
   var rankedNews = {};
   var sortedRankedNews = {};
+  var countryCode, orgCode;
+  var html = "";
 
   // bypass normal form submission
   var form = document.getElementById('paraform');
@@ -23,12 +24,16 @@ $(document).ready(function() {
     return false;
   };
 
-  //$('.parse').on('click', function(){
-  rankNewsArticles();
-  //})
+  // set up click handler for parsing articles
+  $('.parse').on('click', function(){
+  	$('.parsed').empty();
+ 	rankNewsArticles();
+  });
 
   // tally form data and display
   function runForm() {
+  	  	$('.parsed').empty();
+
     var formNumbers = $("form").serialize();
     $('.algorithm').html('');
     $.each(formNumbers.split('&'), function(index, elem) {
@@ -37,13 +42,11 @@ $(document).ready(function() {
         vals[1] = dateToTimerank(vals[1]);
       }
       if (vals[0] == 'organization') {
-        var orgCode = vals[1];
+         orgCode = vals[1];
       }
       if (vals[0] == 'country') {
-        var countryCode = vals[1].toLowerCase();
-
+      	countryCode = vals[1].toLowerCase();
       }
-      console.log(vals[0] + " = " + vals[1]);
       if (vals[1]) {
         $('.algorithm').append(vals[0] + " = " + vals[1] + "<br />");
       }
@@ -53,10 +56,9 @@ $(document).ready(function() {
 
   // parse date into ranking
   function dateToTimerank(dateString) {
-
-    var dateParts = dateString.split(/[.,\/ -]/),
-
-      date = new Date(dateParts[2], parseInt(dateParts[0], 10) - 1, dateParts[1], 0, 0, 0, 0);
+  	var decodedDate = decodeURIComponent(dateString);
+    var dateParts = decodedDate.split(/[.,\/ -]/);
+     date = new Date(dateParts[2], parseInt(dateParts[0], 10) - 1, dateParts[1], 0, 0, 0, 0);
     var chosenTimestamp = date.getTime() / 1000;
 
     var todayTimeStamp = new Date();
@@ -77,6 +79,7 @@ $(document).ready(function() {
 
   // get news and create
   function rankNewsArticles() {
+  	$('.parsed').empty();
     $.getJSON("shortnews.json", function(json) {
       $.each(json, function(i, val) {
         //set rank value
@@ -107,7 +110,8 @@ $(document).ready(function() {
 
         //add values and create new object with them as keys
         total = valRank + valDate + valTarget;
-        rankedNews[total + "-" + i] = val;
+        totalSafe = total * i;
+        rankedNews[totalSafe] = val;
       });
 
       sortRankedNews(rankedNews);
@@ -122,8 +126,9 @@ $(document).ready(function() {
 			keys.push(article);
 		}
   	}
-
+  	//console.log(keys);
 	keys.sort().reverse();
+	//console.log(keys);
 	var len = keys.length;
 
 	for (i = 0; i < len; i++) {
@@ -134,19 +139,22 @@ $(document).ready(function() {
   }
 
   function displayInTemplate(articles){
-  	var html;
+
   	$.each(articles, function(i, val){
   		title = val['Headline'];
   		date = val['SourceDate'];
   		text = val['AbstractNews'];
 
+  		rank = i.split('-');
+
+  		html +="<span class='rank'></span>";
   		html += "<h4>"+title+"</h4>";
   		html += "<span class='date'>"+date+"</span>";
   		html += "<p class='text'>"+text+"</p>";
   		html += "<a href='#'>Read More</a>";
-
   	});
-  	$('.parsed').html(html);
+
+  	$('.parsed').append(html);
   }
 
 });

@@ -6,5 +6,5 @@
 
 
 .parse {display:none;}
-.parsed {padding:20px;}
-
+.parsed {padding:20px;clear:left;}
+.add-on{    padding: 4px 6px 3px;  background: #ccc;}
