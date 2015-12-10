@@ -14,7 +14,7 @@ $(document).ready(function() {
   var articleLimit = 10;
   var rankedNews = {};
   var sortedRankedNews = {};
-  var countryCode, orgCode, dateCode;
+  var countryCode, orgCode, dateCode, regionCode;
   var html = "";
 
 
@@ -51,15 +51,18 @@ $(document).ready(function() {
       }
       if (vals[0] == 'country') {
       	countryCode = vals[1].toLowerCase();
-      
-      // account for region codes
-      if (inArray(countryCode, ["IND","MYS","HKG"])){
-        regionCode = "APAC";
-      } else if (inArray(countryCode, ["US","CAN"])){
-        regionCode = "NAM";
-      } else {
-        regionCode = "EMEA";
-      }
+
+          // account for region codes
+          if ($.inArray(countryCode, ['IND','MYS','HKG'])){
+            regionCode = "APAC";
+          } else if ($.inArray(countryCode, ['US','CAN'])){
+            regionCode = "NAM";
+          } else {
+            regionCode = "EMEA";
+          };
+
+
+
 
       }
       if (vals[1]) {
@@ -105,7 +108,7 @@ console.log(dateString);
   // get news and create
   function rankNewsArticles() {
   	$('.parsed').empty();
-    $.getJSON("news.json", function(json) {
+    $.getJSON("json/shortnews.json", function(json) {
       $.each(json, function(i, val) {
 
         //set rank value
