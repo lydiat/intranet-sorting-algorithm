@@ -1,0 +1,33 @@
+[
+  {
+    "TargetID":"USA",
+    "TargetDesc":"United States",
+    "TargetRegion" : "NAM"
+  },
+  {
+    "TargetID":"HKG",
+    "TargetDesc":"Hong Kong",
+    "TargetRegion" : "APAC"
+  },
+  {
+    "TargetID":"IND",
+    "TargetDesc":"India",
+    "TargetRegion" : "APAC"
+  },
+  {
+    "TargetID":"UK",
+    "TargetDesc":"United Kingdom",
+    "TargetRegion" : "EMEA"
+
+  },
+  {
+    "TargetID":"CAN",
+    "TargetDesc":"Canada",
+    "TargetRegion" : "NAM"
+  },
+  {
+    "TargetID":"IDN",
+    "TargetDesc":"Indonesia",
+    "TargetRegion" : "APAC"
+  }
+]
