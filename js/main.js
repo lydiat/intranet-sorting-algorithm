@@ -11,10 +11,13 @@ $(document).ready(function() {
 
 
   // define vars
+  var articleLimit = 10;
   var rankedNews = {};
   var sortedRankedNews = {};
   var countryCode, orgCode;
   var html = "";
+  var j = 0;
+
 
   // bypass normal form submission
   var form = document.getElementById('paraform');
@@ -82,6 +85,7 @@ $(document).ready(function() {
   	$('.parsed').empty();
     $.getJSON("shortnews.json", function(json) {
       $.each(json, function(i, val) {
+
         //set rank value
         var valRank = val["Rank"];
         if (valRank <= 3) {
@@ -110,8 +114,12 @@ $(document).ready(function() {
 
         //add values and create new object with them as keys
         total = valRank + valDate + valTarget;
-        totalSafe = total * i;
+        console.log(val["Headline"] + ":");
+        console.log(" rank " + valRank + " | date  " +  valDate  + " | target  " + valTarget + " | total " + total);
+
+        totalSafe = total  + 500 ; // account for negative numbers and duplicate keys
         rankedNews[totalSafe] = val;
+        rankedNews[totalSafe]["totalRank"] = totalSafe;
       });
 
       sortRankedNews(rankedNews);
@@ -126,14 +134,16 @@ $(document).ready(function() {
 			keys.push(article);
 		}
   	}
-  	//console.log(keys);
-	keys.sort().reverse();
-	//console.log(keys);
+
+	keys.sort();
+	keys.reverse();
+	console.log(keys);
+
 	var len = keys.length;
 
 	for (i = 0; i < len; i++) {
 	  k = keys[i];
-	  sortedRankedNews[k] = articles[k];
+	  sortedRankedNews[i] = articles[k];
 	}
 	displayInTemplate(sortedRankedNews);
   }
@@ -141,20 +151,30 @@ $(document).ready(function() {
   function displayInTemplate(articles){
 
   	$.each(articles, function(i, val){
+  		j++;
   		title = val['Headline'];
   		date = val['SourceDate'];
   		text = val['AbstractNews'];
+  		desc = val['TargetDesc'];
+  		id = val['TargetID'];
+  		rank = val['totalRank'] - 500;
 
-  		rank = i.split('-');
-
-  		html +="<span class='rank'></span>";
+  		html +="<div class='rank'>"+rank+"</div>";
   		html += "<h4>"+title+"</h4>";
-  		html += "<span class='date'>"+date+"</span>";
+  		html += "<span class='date'>"+date+"</span><br />";
+  		html += "<span class='date'>"+id+"</span><br />";
+  		html += "<span class='date'>"+desc+"</span><br />";
   		html += "<p class='text'>"+text+"</p>";
-  		html += "<a href='#'>Read More</a>";
+  		if (j == articleLimit)
+
+        	return false;
   	});
 
   	$('.parsed').append(html);
   }
+
+	function compareNumbers(a, b) {
+		return a - b;
+	}
 
 });

@@ -7,7 +7,7 @@
     "SourceDate":"12/09/2015"
   },
   {
-    "Rank":"2",
+    "Rank":"3",
     "Headline":"Message from Steve Macke: \"It's Alive\"",
     "TargetID":"4462",
     "TargetDesc":"Global Consumer Banking [L4]",
@@ -15,23 +15,23 @@
     "SourceDate":"12/08/2015"
   },
   {
-    "Rank":"1",
+    "Rank":"999",
     "Headline":"Citibank Launches Citi Priority for the Emerging Affluent in Hong Kong",
     "TargetID":"GLOBAL",
     "TargetDesc":"Global",
     "AbstractNews":"Citibank announced the launch of Citi Priority, a new value proposition targeting the emerging affluent, with a digitalized, convenient, simple and efficient banking experience to equip aspirational and financially progressive clients.",
     "SourceDate":"12/03/2015"
   },
-  {
+   {
     "Rank":"2",
-    "Headline":"Citibank Launches Citi Priority for the Emerging Affluent in Hong Kong",
-    "TargetID":"4462",
-    "TargetDesc":"Global Consumer Banking [L4]",
-    "AbstractNews":"Citibank announced the launch of Citi Priority, a new value proposition targeting the emerging affluent, with a digitalized, convenient, simple and efficient banking experience to equip aspirational and financially progressive clients.",
-    "SourceDate":"12/03/2015"
+    "Headline":"Press Release: Citi Expands Citi Payment Exchange into Canada",
+    "TargetID":"CAN",
+    "TargetDesc":"Canada",
+    "AbstractNews":"Citi has launched Citi� Payment Exchange, its integrated and highly flexible institutional payment-processing solution, in Canada. This follows the successful launch of the service in the U.S. in 2012. ",
+    "SourceDate":"12/10/2015"
   },
   {
-    "Rank":"2",
+    "Rank":"999",
     "Headline":"WV Gov. Tomblin appoints Acting Commission of Division of Financial Institutions ",
     "TargetID":"9905249",
     "TargetDesc":"Global Gov Affairs [L6]",
@@ -44,7 +44,7 @@
     "TargetID":"9905249",
     "TargetDesc":"Global Gov Affairs [L6]",
     "AbstractNews":"The two main items Congress has to immediately address in September is a vote on the Iran nuclear agreement and passing a Continuing Resolution (CR) to fund the government after September 30.",
-    "SourceDate":"12/08/2015"
+    "SourceDate":"12/10/2015"
   },
   {
     "Rank":"2",
@@ -55,12 +55,12 @@
     "SourceDate":"12/08/2015"
   },
   {
-    "Rank":"1",
+    "Rank":"999",
     "Headline":"Illinois Gov. vetoes data breach bill supported by AG Madigan",
     "TargetID":"9905249",
     "TargetDesc":"Global Gov Affairs [L6]",
     "AbstractNews":"On August 21, Illinois Governor Bruce Rauner (R) issued a much sought after amendatory veto of data breach legislation championed by Attorney General Lisa Madigan (D). The General Assembly will have an opportunity to override Rauner�s veto later this fall",
-    "SourceDate":"11/08/2015"
+    "SourceDate":"12/08/2015"
   },
   {
     "Rank":"3",
@@ -68,15 +68,7 @@
     "TargetID":"9905249",
     "TargetDesc":"Global Gov Affairs [L6]",
     "AbstractNews":"New Mexico Secretary of State Dianna Duran was charged with 64 counts, including fraud, embezzlement and conspiracy.",
-    "SourceDate":"11/08/2015"
-  },
-    {
-    "Rank":"2",
-    "Headline":"New Mexico Secretary of State accused of embezzlement, money laundering",
-    "TargetID":"9905249",
-    "TargetDesc":"Global Gov Affairs [L6]",
-    "AbstractNews":"New Mexico Secretary of State Dianna Duran was charged with 64 counts, including fraud, embezzlement and conspiracy.",
-    "SourceDate":"11/08/2015"
+    "SourceDate":"12/08/2015"
   },
   {
     "Rank":"2",
@@ -87,7 +79,7 @@
     "SourceDate":"12/02/2015"
   },
    {
-    "Rank":"1",
+    "Rank":"999",
     "Headline":"The Search for Growth and Stability Amidst Deflation and Divergence",
     "TargetID":"EMEA",
     "TargetDesc":"EMEA",
@@ -101,5 +93,53 @@
     "TargetDesc":"APAC",
     "AbstractNews":"Citi Asia Pacific CEO Francisco Aristeguieta paid a courtesy call on Hong Kong Monetary Authority (HKMA) Chief Executive Norman Chan last week. ",
     "SourceDate":"12/01/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"Jeff Bienstock - Your Opinion Counts - Take the Voice of the Employee Survey",
+    "TargetID":"12522",
+    "TargetDesc":"Office of the CTO ",
+    "AbstractNews":"Please complete your VOE Survey by September 30.",
+    "SourceDate":"11/30/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"David Rafalovky - Your Opinion Counts: Take the Voice of the Employee Survey",
+    "TargetID":"12522",
+    "TargetDesc":"Office of the CTO ",
+    "AbstractNews":"Please complete your VOE Survey by September 30.",
+    "SourceDate":"11/30/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"No Further Expansion of Non-Strategic Hardware for Existing Applications",
+    "TargetID":"12522",
+    "TargetDesc":"Office of the CTO ",
+    "AbstractNews":"Plan timely re-platforming for non-strategic platform hosts nearing resource capacity limitations.",
+    "SourceDate":"11/30/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"REMINDER | Lunch & Learn Session hosted by Citi Professional Recruiting",
+    "TargetID":"12522",
+    "TargetDesc":"Office of the CTO ",
+    "AbstractNews":"Join Enterprise Technology Executive Recruiter Kelli Brown as she talks about the criteria of moving in to a new role, how to search and apply for positions, and details on Citi�s referral program.",
+    "SourceDate":"11/30/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"Jason Channell on Energy Darwinism and Opportunities for the Future",
+    "TargetID":"GLOBAL",
+    "TargetDesc":"Global",
+    "AbstractNews":"Jason Channell, Global Head of Alternative Energy and Cleantech Research, discusses Citi�s analysis in the recent Global Perspectives & Solutions (GPS) report, \"Energy Darwinism II.\"",
+    "SourceDate":"11/30/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"Progress Makers: Preserving the Everglades for Future Generations",
+    "TargetID":"GLOBAL",
+    "TargetDesc":"GLOBAL",
+    "AbstractNews":"In this Progress Portal article, Citi's Michael Hole, Managing Director, Municipal Securities Division, writes about how his work with the South Florida Water Management District is helping to save Florida's Everglades.",
+    "SourceDate":"11/30/2015"
   }
   ]
