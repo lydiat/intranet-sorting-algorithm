@@ -1,11 +1,4 @@
-[{
-    "Rank":"3",
-    "Headline":"J.D. Power and Associates U.S. Credit Card Satisfaction Study Results",
-    "TargetID":"GLOBAL",
-    "TargetDesc":"Global",
-    "AbstractNews":"A memo from CEO of Cards, Jud Linville and Chief Client Experience, Digital and Marketing Officer, Heather Cox on the release of J.D. Power and Associates U.S. Credit Card Satisfaction Study Results.",
-    "SourceDate":"12/09/2015"
-  },
+[
   {
     "Rank":"3",
     "Headline":"Message from Steve Macke: \"It's Alive\"",
@@ -28,6 +21,14 @@
     "TargetID":"CAN",
     "TargetDesc":"Canada",
     "AbstractNews":"Citi has launched Citi� Payment Exchange, its integrated and highly flexible institutional payment-processing solution, in Canada. This follows the successful launch of the service in the U.S. in 2012. ",
+    "SourceDate":"12/10/2015"
+  },
+  {
+    "Rank":"1",
+    "Headline":"J.D. Power and Associates U.S. Credit Card Satisfaction Study Results",
+    "TargetID":"GLOBAL",
+    "TargetDesc":"Global",
+    "AbstractNews":"A memo from CEO of Cards, Jud Linville and Chief Client Experience, Digital and Marketing Officer, Heather Cox on the release of J.D. Power and Associates U.S. Credit Card Satisfaction Study Results.",
     "SourceDate":"12/10/2015"
   },
   {

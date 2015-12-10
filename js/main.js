@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+
   // init datepicker
   $('#dp').datepicker({
     format: "mm/dd/yyyy",
@@ -8,12 +9,15 @@ $(document).ready(function() {
     todayHighlight: true
   });
 
+
   // define vars
   var articleLimit = 10;
   var rankedNews = {};
   var sortedRankedNews = {};
   var countryCode, orgCode, dateCode;
   var html = "";
+
+
 
   // bypass normal form submission
   var form = document.getElementById('paraform');
@@ -23,16 +27,17 @@ $(document).ready(function() {
     return false;
   };
 
+
   // set up click handler for parsing articles
   $('.parse').on('click', function(){
   	$('.parsed').empty();
  	rankNewsArticles();
   });
 
+
   // tally form data and display
   function runForm() {
-  	  	$('.parsed').empty();
-
+  	$('.parsed').empty();
     var formNumbers = $("form").serialize();
     $('.algorithm').html('');
     $.each(formNumbers.split('&'), function(index, elem) {
@@ -46,6 +51,16 @@ $(document).ready(function() {
       }
       if (vals[0] == 'country') {
       	countryCode = vals[1].toLowerCase();
+      
+      // account for region codes
+      if (inArray(countryCode, ["IND","MYS","HKG"])){
+        regionCode = "APAC";
+      } else if (inArray(countryCode, ["US","CAN"])){
+        regionCode = "NAM";
+      } else {
+        regionCode = "EMEA";
+      }
+
       }
       if (vals[1]) {
         $('.algorithm').append(vals[0] + " = " + vals[1] + "<br />");
@@ -53,6 +68,7 @@ $(document).ready(function() {
     });
     $('.parse').fadeIn();
   };
+
 
   // parse date into ranking
   function dateToTimerank(dateString) {
@@ -85,15 +101,16 @@ console.log(dateString);
     return rank;
   }
 
+
   // get news and create
   function rankNewsArticles() {
   	$('.parsed').empty();
-    $.getJSON("shortnews.json", function(json) {
+    $.getJSON("news.json", function(json) {
       $.each(json, function(i, val) {
 
         //set rank value
         var valRank = val["Rank"];
-        if (valRank <= 3) {
+        if (valRank <= 3 && valRank != 999) {
           valRank = (valRank * -1) + 4;
         } else {
           valRank = 0;
@@ -104,14 +121,22 @@ console.log(dateString);
         var valDate = dateToTimerank(valDate);
         var valDate = Math.round(valDate);
 
+
+
         //set target rank value
         var valTarget = val["TargetID"].toLowerCase();
+  
+
+
         //if global give a rank of 2
         if (valTarget == 'global') {
           valTarget = 2;
         }
+       
+  
+
         //if target ID matches country or org, give rank of 1
-        else if (valTarget == countryCode || valTarget == orgCode) {
+        else if (valTarget == countryCode || valTarget == orgCode || valTarget == regionCode) {
           valTarget = 1;
         } else {
           valTarget = 0;
@@ -131,6 +156,7 @@ console.log(dateString);
       sortRankedNews(rankedNews);
     });
   }
+
 
   function sortRankedNews(articles) {
   	var keys = [];
@@ -152,6 +178,7 @@ console.log(dateString);
   	}
   	displayInTemplate(sortedRankedNews);
   }
+
 
   function displayInTemplate(articles){
     var j = 0;
@@ -178,6 +205,7 @@ console.log(dateString);
 
   	$('.parsed').append(html);
   }
+
 
 	function compareNumbers(a, b) {
 		return a - b;
