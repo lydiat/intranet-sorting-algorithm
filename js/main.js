@@ -8,16 +8,12 @@ $(document).ready(function() {
     todayHighlight: true
   });
 
-
-
   // define vars
   var articleLimit = 10;
   var rankedNews = {};
   var sortedRankedNews = {};
-  var countryCode, orgCode;
+  var countryCode, orgCode, dateCode;
   var html = "";
-  var j = 0;
-
 
   // bypass normal form submission
   var form = document.getElementById('paraform');
@@ -42,8 +38,9 @@ $(document).ready(function() {
     $.each(formNumbers.split('&'), function(index, elem) {
       var vals = elem.split('=');
       if (vals[0] == 'date') {
-        vals[1] = dateToTimerank(vals[1]);
-      }
+        vals[1] = decodeURIComponent(vals[1]);
+        dateCode = vals[1];
+     }
       if (vals[0] == 'organization') {
          orgCode = vals[1];
       }
@@ -59,23 +56,31 @@ $(document).ready(function() {
 
   // parse date into ranking
   function dateToTimerank(dateString) {
-  	var decodedDate = decodeURIComponent(dateString);
-    var dateParts = decodedDate.split(/[.,\/ -]/);
-     date = new Date(dateParts[2], parseInt(dateParts[0], 10) - 1, dateParts[1], 0, 0, 0, 0);
-    var chosenTimestamp = date.getTime() / 1000;
+    var decodedSourceDate = decodeURIComponent(dateString);
+    var sourceDateParts = decodedSourceDate.split(/[.,\/ -]/);
+    var sourceDate = new Date(sourceDateParts[2], parseInt(sourceDateParts[0], 10) - 1, sourceDateParts[1], 0, 0, 0, 0);
+    var sourceTimestamp = sourceDate.getTime() / 1000;
+console.log(dateString);
 
-    var todayTimeStamp = new Date();
-    todayTimeStamp.setHours(0, 0, 0, 0);
-    todayTimeStamp = todayTimeStamp.getTime() / 1000;
+    var chosenTimeStamp = dateCode;
+    var chosenDateParts = chosenTimeStamp.split(/[.,\/ -]/);
+    var chosenDate = new Date(chosenDateParts[2], parseInt(chosenDateParts[0], 10) - 1, chosenDateParts[1], 0, 0, 0, 0);
+    var chosenTimestamp = chosenDate.getTime() / 1000;
 
-    if (todayTimeStamp == chosenTimestamp) {
+    // if article publish date is equal to chosen date
+    if (sourceTimestamp == chosenTimestamp) {
       rank = 2;
-    } else {
-      var daysOff = todayTimeStamp - chosenTimestamp;
+    } 
+    // if article publish date was prior to chosen date
+    else if (chosenTimestamp > sourceTimestamp) {
+      var daysOff = chosenTimestamp - sourceTimestamp;
       var rank = daysOff / 86400; // divide by seconds in day to get days
       if (rank > 1) {
         rank = (rank * -1) + 2;
       }
+    // if article public date is in the future
+    } else {
+      rank = -100;
     }
     return rank;
   }
@@ -117,38 +122,39 @@ $(document).ready(function() {
         console.log(val["Headline"] + ":");
         console.log(" rank " + valRank + " | date  " +  valDate  + " | target  " + valTarget + " | total " + total);
 
-        totalSafe = total  + 500 ; // account for negative numbers and duplicate keys
+        totalSafe = total  + 500 + "+" + i; // account for negative numbers
+        console.log(totalSafe);
         rankedNews[totalSafe] = val;
         rankedNews[totalSafe]["totalRank"] = totalSafe;
       });
-
+      console.log(rankedNews);
       sortRankedNews(rankedNews);
     });
   }
 
   function sortRankedNews(articles) {
   	var keys = [];
-
+    var k;
   	for(article in articles){
-		if (articles.hasOwnProperty(article)) {
-			keys.push(article);
-		}
+  		if (articles.hasOwnProperty(article)) {
+  			keys.push(article);
+  		}
   	}
 
-	keys.sort();
-	keys.reverse();
-	console.log(keys);
+  	keys.sort();
+    keys.reverse();
 
-	var len = keys.length;
+  	var len = keys.length;
 
-	for (i = 0; i < len; i++) {
-	  k = keys[i];
-	  sortedRankedNews[i] = articles[k];
-	}
-	displayInTemplate(sortedRankedNews);
+  	for (i = 0; i < len; i++) {
+  	  k = keys[i];
+  	  sortedRankedNews[i] = articles[k];
+  	}
+  	displayInTemplate(sortedRankedNews);
   }
 
   function displayInTemplate(articles){
+    var j = 0;
 
   	$.each(articles, function(i, val){
   		j++;
@@ -165,8 +171,8 @@ $(document).ready(function() {
   		html += "<span class='date'>"+id+"</span><br />";
   		html += "<span class='date'>"+desc+"</span><br />";
   		html += "<p class='text'>"+text+"</p>";
-  		if (j == articleLimit)
 
+  		if (j == articleLimit)
         	return false;
   	});
 
