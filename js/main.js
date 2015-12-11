@@ -61,13 +61,14 @@ $(document).ready(function() {
         countryCode = vals[1].toLowerCase();
         console.log(countryCode);
         // account for region codes
-        if ($.inArray(countryCode, ['IND', 'MYS', 'HKG'])) {
-          regionCode = "APAC";
-        } else if ($.inArray(countryCode, ['USA', 'CAN'])) {
-          regionCode = "NAM";
+        if ($.inArray(countryCode, ['ind', 'mys', 'hkg']) !== -1) {
+          regionCode = "apac";
+        } else if ($.inArray(countryCode, ['usa', 'can']) !== -1) {
+          regionCode = "nam";
         } else {
-          regionCode = "EMEA";
+          regionCode = "emea";
         };
+        console.log(regionCode);
 
       }
       //if (vals[1]) {
@@ -77,10 +78,8 @@ $(document).ready(function() {
     // $('.parse').fadeIn();
     $('.parsed').empty();
     if (status == "new") {
-      console.log('new');
       newRankNewsArticles();
     } else {
-      console.log('old');
       oldRankNewsArticles();
     }
 
@@ -92,7 +91,7 @@ $(document).ready(function() {
     var sourceDateParts = decodedSourceDate.split(/[.,\/ -]/);
     var sourceDate = new Date(sourceDateParts[2], parseInt(sourceDateParts[0], 10) - 1, sourceDateParts[1], 0, 0, 0, 0);
     var sourceTimestamp = sourceDate.getTime() / 1000;
-    //console.log(dateString);
+    console.log(dateString);
 
     var chosenTimeStamp = dateCode;
     var chosenDateParts = chosenTimeStamp.split(/[.,\/ -]/);
@@ -152,8 +151,8 @@ $(document).ready(function() {
 
         //add values and create new object with them as keys
         var total = valRank + valDate + valTarget;
-        //console.log(val["Headline"] + ":");
-        //console.log(" rank " + valRank + " | date  " + valDate + " | target  " + valTarget + " | total " + total);
+        console.log(val["Headline"] + ":");
+        console.log(" rank " + valRank + " | date  " + valDate + " | target  " + valTarget + " | total " + total);
 
         var totalSafe = total + 500 + "+" + i; // account for negative numbers
         //console.log(totalSafe);
@@ -198,40 +197,56 @@ $(document).ready(function() {
   };
 
   function oldSortRankedNews(articles) {
+
     $('.parsed').load('templates/template_old.html', function() {
 
-      var x = articles['global'];
+      $.each(articles, function(section,val){
 
-      var i = 0;
+        i = 0;
+        for (var key in val) {
+          if (val.hasOwnProperty(key)) {
+            thisVal = val[key];
 
-      for (var key in x) {
-        if (x.hasOwnProperty(key)) {
-          val = x[key];
+            title = thisVal['Headline'];
+            date = thisVal['SourceDate'];
+            text = thisVal['AbstractNews'];
+            desc = thisVal['TargetDesc'];
+            id = thisVal['TargetID'];
 
-          title = val['Headline'];
-          date = val['SourceDate'];
-          text = val['AbstractNews'];
-          desc = val['TargetDesc'];
-          id = val['TargetID'];
+            sectionTitle = capitalizeFirstLetter(desc);
+            console.log(sectionTitle);
 
-          if (title.length > 100) {
-            title = $.trim(title).substring(0, 100).split(" ").slice(0, -1).join(" ") + "...";
-          }
-          if (text.length > 200) {
-            text = $.trim(text).substring(0, 200).split(" ").slice(0, -1).join(" ") + "...";
-          }
+            if (title.length > 100) {
+              title = $.trim(title).substring(0, 100).split(" ").slice(0, -1).join(" ") + "...";
+            }
+            if (text.length > 200) {
+              text = $.trim(text).substring(0, 200).split(" ").slice(0, -1).join(" ") + "...";
+            }
 
-          $('.parsed .headline:eq(' + i + ') a').html(title)
-          $('.parsed .date:eq(' + i + ')').html(date)
-          $('.parsed .text:eq(' + i + ')').html(text)
+            $('.parsed .'+section+' .headline:eq(' + i + ') a').html(title);
+            $('.parsed .'+section+' .date:eq(' + i + ')').html(date);
+            $('.parsed .'+section+' .text:eq(' + i + ')').html(text);
+            $('.parsed .'+section+' h3').html(sectionTitle);
+            i++;
 
+          };
+          if (i > 2)
+            break;
         };
-        i++;
-        if (i > 2)
-          break;
-      };
+
+      });
+      $.each($('.headline a'), function(count, elem){
+        if($(elem).html() == ''){
+          $(this).parent('.headline').siblings('.more').hide();
+        }
+      });
+
     });
   };
+
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
 
   function sortRankedNews(articles) {
     var keys = [];
