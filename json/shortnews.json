@@ -1,12 +1,5 @@
 [
-  {
-    "Rank":"3",
-    "Headline":"Message from Steve Macke: \"It's Alive\"",
-    "TargetID":"4462",
-    "TargetDesc":"Global Consumer Banking [L4]",
-    "AbstractNews":"Head of Global Collections Steve Macke congratulates the NA Collections Procedures team for their efforts in completing the first phase of transitioning procedures and documents to the new Knowledge Hub.",
-    "SourceDate":"12/08/2015"
-  },
+
   {
     "Rank":"999",
     "Headline":"Citibank Launches Citi Priority for the Emerging Affluent in Hong Kong",
@@ -14,6 +7,14 @@
     "TargetDesc":"Global",
     "AbstractNews":"Citibank announced the launch of Citi Priority, a new value proposition targeting the emerging affluent, with a digitalized, convenient, simple and efficient banking experience to equip aspirational and financially progressive clients.",
     "SourceDate":"12/03/2015"
+  },
+    {
+    "Rank":"999",
+    "Headline":"AWARENESS Opportunities within CRS (November)",
+    "TargetID":"16312",
+    "TargetDesc":"Enterprise Infrastructure ",
+    "AbstractNews":"Continuing our efforts to keep our staff well informed on positions available across the organization, please see below for list of opportunities currently open within CRS globally.",
+    "SourceDate":"11/16/2015"
   },
    {
     "Rank":"2",
@@ -31,46 +32,221 @@
     "AbstractNews":"A memo from CEO of Cards, Jud Linville and Chief Client Experience, Digital and Marketing Officer, Heather Cox on the release of J.D. Power and Associates U.S. Credit Card Satisfaction Study Results.",
     "SourceDate":"12/10/2015"
   },
-  {
+ {
     "Rank":"999",
-    "Headline":"WV Gov. Tomblin appoints Acting Commission of Division of Financial Institutions ",
-    "TargetID":"9905249",
-    "TargetDesc":"Global Gov Affairs [L6]",
-    "AbstractNews":"West Virginia Governor Earl Ray Tomblin (R) appointed Dawn E. Holstein as Acting Commissioner of the West Virginia Division of Financial Institutions following the recent departure of Commissioner Sally Cline to head West Virginia Bankers Association.",
-    "SourceDate":"12/08/2015"
+    "Headline":"Citi Nabs Two Top Digital Awards for its Voice Biometrics Initiative",
+    "TargetID":"20497",
+    "TargetDesc":"Consumer O & T",
+    "AbstractNews":"Citi's new Voice Biometrics technology is detecting a new sound:applause.  Citi's technology initiative recently received two trophies at the 2015 Gartner Financial Services Cool Business Awards session.",
+    "SourceDate":"12/7/2015"
   },
   {
-    "Rank":"1",
-    "Headline":"Congress will return from their August Recess to a full schedule in September.  ",
-    "TargetID":"9905249",
-    "TargetDesc":"Global Gov Affairs [L6]",
-    "AbstractNews":"The two main items Congress has to immediately address in September is a vote on the Iran nuclear agreement and passing a Continuing Resolution (CR) to fund the government after September 30.",
-    "SourceDate":"12/10/2015"
+    "Rank":"999",
+    "Headline":"Citi Launches Prestige Credit Card in the Philippines",
+    "TargetID":"20497",
+    "TargetDesc":"GCB O&T [L7]",
+    "AbstractNews":"Citi's first global credit card for affluent clients - Citi Prestige - was launched in the Philippines earlier this week.",
+    "SourceDate":"12/11/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"World Quality Day",
+    "TargetID":"6808",
+    "TargetDesc":"Citi Global Program Management",
+    "AbstractNews":"This day-long event will feature an assortment of virtual seminars for Citi colleagues who are interested in learning more about quality, as well as for the daily quality assurance practitioners in our Process Quality Assurance community.",
+    "SourceDate":"11/23/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"CitiPhone Switch to Online Services Improves Customer Convenience",
+    "TargetID":"20497",
+    "TargetDesc":"GCB O&T [L7]",
+    "AbstractNews":"The CitiPhone team achieved a $400,000 saving in annual operating costs in consumer markets by driving increased awareness and usage of online services already available to customers, demonstrating how Execution 2.0 is making a difference.",
+    "SourceDate":"11/12/2015"
+  },
+    {
+    "Rank":"3",
+    "Headline":"Project Management and Business Analyst Training Roadmaps (PMTR/BATR)",
+    "TargetID":"6808",
+    "TargetDesc":"Citi Global Program Management",
+    "AbstractNews":"The PM and BA training roadmaps are structured learning guides that are designed to build a comprehensive and deep understanding of the essential skills required of Citi's project managers and business analysts.",
+    "SourceDate":"12/3/2015"
   },
   {
     "Rank":"2",
-    "Headline":"Virginia Attorney General Herring will seek second term, not run for governor",
-    "TargetID":"9905249",
-    "TargetDesc":"Global Gov Affairs [L6]",
-    "AbstractNews":"Surprising many, Virginia Attorney General Mark R. Herring announced last week that he will seek a second term as AG and will not seek to be the Democrats' 2017 gubernatorial nominee.",
-    "SourceDate":"12/08/2015"
+    "Headline":"Citi Honduras: 50 Years of Supporting Clients, Colleagues and Communities ",
+    "TargetID":"16803",
+    "TargetDesc":"Global Public Affairs [L5]",
+    "AbstractNews":"At Citi Honduras, we believe in perseverance. For the past 50 years, it has enabled us to achieve our goals by tirelessly serving our clients, advancing their interests and helping to connect them with the world. Read this article in English and Espa�ol.",
+    "SourceDate":"12/4/2015"
   },
-
+    {
+    "Rank":"999",
+    "Headline":"Baking a Change: South Africa Entrepreneur Finds Success Through Citi Program ",
+    "TargetID":"16803",
+    "TargetDesc":"Global Public Affairs [L5]",
+    "AbstractNews":"With support from the Citi Foundation and the global nonprofit TechnoServe, Lufefe Nomjana started Espinaca Bakery, which produces products fortified with spinach, in Cape Town. ",
+    "SourceDate":"11/17/2015"
+  },
+    {
+    "Rank":"999",
+    "Headline":"Kenya: Nairobi Branch is Citi's Second LEED-Certified Building in Africa",
+    "TargetID":"16803",
+    "TargetDesc":"Global Public Affairs [L5]",
+    "AbstractNews":"Citi Kenya�s Gigiri branch in Nairobi has received LEED Gold certification. This is Citi's second LEED-certified building in Africa; the first is in Zambia.",
+    "SourceDate":"11/28/2015"
+  },
+   {
+    "Rank":"999",
+    "Headline":"Ireland: Citi Celebrates 50 Years of Progress ",
+    "TargetID":"16803",
+    "TargetDesc":"Global Public Affairs [L5]",
+    "AbstractNews":"Citi is celebrating a milestone: 50 years in Ireland serving global clients in key locations around the world.",
+    "SourceDate":"12/2/2015"
+  },
+    {
+    "Rank":"999",
+    "Headline":"Bahamas: Back to School Jamboree Helps Kids",
+    "TargetID":"16803",
+    "TargetDesc":"Global Public Affairs [L5]",
+    "AbstractNews":"Citi Bahamas volunteers joined with the Rotary Club to equip 150 kids for the school year. ",
+    "SourceDate":"11/22/2015"
+  },
+    {
+    "Rank":"999",
+    "Headline":"Automatic Disablement of Staff Entitlements upon 45 Days Past Due Manager Review",
+    "TargetID":"5497",
+    "TargetDesc":"Enterprise O&T ",
+    "AbstractNews":"One of the most important safeguards to protect Citi's information is a manager�s oversight of his or her staff�s access to systems and databases, following the EERS process.",
+    "SourceDate":"11/23/2015"
+  },
+    {
+    "Rank":"999",
+    "Headline":"Global Head of Entertainment Jennifer Breithaupt Kicks Off TODAY Concert Series",
+    "TargetID":"4462",
+    "TargetDesc":"Global Consumer Banking [L4]",
+    "AbstractNews":"Flanked by a large video screen showcasing a barrage of real-time social media messages posted by excited fans, Citi Global Head of Entertainment Jennifer Breithaupt joined the TODAY crew to kick off the new �Citi Concert Series on TODAY.� ",
+    "SourceDate":"11/14/2015"
+  },
   {
     "Rank":"999",
-    "Headline":"Illinois Gov. vetoes data breach bill supported by AG Madigan",
-    "TargetID":"9905249",
-    "TargetDesc":"Global Gov Affairs [L6]",
-    "AbstractNews":"On August 21, Illinois Governor Bruce Rauner (R) issued a much sought after amendatory veto of data breach legislation championed by Attorney General Lisa Madigan (D). The General Assembly will have an opportunity to override Rauner's veto later this fall",
-    "SourceDate":"12/08/2015"
+    "Headline":"First-Time Homebuyer Educational Webinar on October 29",
+    "TargetID":"9908839",
+    "TargetDesc":"Retail Services ",
+    "AbstractNews":"Please join us for a First-Time Homebuyer Educational Webinar hosted by your Citibank colleagues to help answer any questions you may have about taking the steps to owning your own home.",
+    "SourceDate":"12/5/2015"
   },
   {
-    "Rank":"3",
-    "Headline":"New Mexico Secretary of State accused of embezzlement, money laundering",
-    "TargetID":"9905249",
-    "TargetDesc":"Global Gov Affairs [L6]",
-    "AbstractNews":"New Mexico Secretary of State Dianna Duran was charged with 64 counts, including fraud, embezzlement and conspiracy.",
-    "SourceDate":"12/08/2015"
+    "Rank":"999",
+    "Headline":"Shining A Light on the Global Goals In Central Park ",
+    "TargetID":"4462",
+    "TargetDesc":"GCB",
+    "AbstractNews":"Last Saturday, Citi colleagues, customers and some of the world�s most renowned artists, policymakers, dignitaries and business leaders came together at the Global Citizens Festival in Central Park. ",
+    "SourceDate":"12/1/2015"
+  },
+   {
+    "Rank":"999",
+    "Headline":"Message From Jonathan Larsen: The Future of Retail Banking and Mortgage",
+    "TargetID":"4462",
+    "TargetDesc":"GCB",
+    "AbstractNews":"In a recent announcement, Global Head of Retail Banking Jonathan Larsen discusses how the U.S. Retail Banking and Mortgage organization is accelerating its progress to succeed in a rapidly changing mobile and digital world.",
+    "SourceDate":"12/1/2015"
+  },
+    {
+    "Rank":"999",
+    "Headline":"Top CEOs Cite Business Game Changers and Strategy",
+    "TargetID":"4462",
+    "TargetDesc":"Global Consumer Banking [L4]",
+    "AbstractNews":"Jud Linville, CEO Citi Cards, shares his insights on Citi's strategy and what he sees around the corner. Jud participated in a Forbes-hosted roundtable conversation with business leaders.",
+    "SourceDate":"11/12/2015"
+  },
+   {
+    "Rank":"999",
+    "Headline":"Citi and YouGov Survey Results Show Consumer Patterns in UAE",
+    "TargetID":"4462",
+    "TargetDesc":"Global Consumer Banking [L4]",
+    "AbstractNews":"The survey launched by YouGov in partnership with Al Etihad Credit Bureau and Citi UAE reveals 88% of affluent people living in the UAE have credit obligations.",
+    "SourceDate":"11/12/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"Replays of Info To Go Sessions Available Online ",
+    "TargetID":"9908839",
+    "TargetDesc":"Retail Services ",
+    "AbstractNews":"Video replays of the following sessions are now available online. You can access all of our Retail Services Info To Go video replays at any time by going to the Video Replay Site link in the left navigation on the HUB..",
+    "SourceDate":"12/6/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"USCCM COO Tony Renzi Announces Organizational Changes",
+    "TargetID":"20497",
+    "TargetDesc":"Consumer O & T",
+    "AbstractNews":"In an email to employees, USCCM Operations COO Tony Renzi announced the next step in the evolution of the operations team supporting U.S. Retail Banking and Mortgage as a client-centric servicing organization.",
+    "SourceDate":"12/6/2015"
+  },
+    {
+    "Rank":"999",
+    "Headline":"Delivering Remarkable Experiences",
+    "TargetID":"5497",
+    "TargetDesc":"Enterprise O&T [L4]",
+    "AbstractNews":"Matt Allred, Managing Director Citi Retail Services Customer Service and Partner Operations, talks about his organization's focus on delivering Remarkable experiences. ",
+    "SourceDate":"11/24/2015"
+  },
+    {
+    "Rank":"999",
+    "Headline":"Agile Engineering Culture at Spotify Shines Light on How We Need to Evolve",
+    "TargetID":"5497",
+    "TargetDesc":"Enterprise O&T [L4]",
+    "AbstractNews":"Head of Global Consumer Cross Product Architecture Suresh Babu shares videos showing how Spotify, an internet music service company, has implemented an agile engineering culture.",
+    "SourceDate":"11/24/2015"
+  },
+    {
+    "Rank":"999",
+    "Headline":"Tackling a lot of Data with Light Speed: Citi Cash Account Initiative",
+    "TargetID":"5497",
+    "TargetDesc":"Enterprise O&T [L4]",
+    "AbstractNews":"On any given day, the total cash held by Citi averages around $450 billion, spread across more than 25,000 accounts in 90 countries, including accounts held by third-party banks. The Citi Cash Account Initiative makes reconciling all that cash happen.",
+    "SourceDate":"11/28/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"Message from Corey Woods: Year-End Performance Review",
+    "TargetID":"20497",
+    "TargetDesc":"Consumer O & T",
+    "AbstractNews":"In an email to employees, Managing Director Corey Woods shared a timetable for GCB O&T to ensure that managers have all the information they need to conduct timely ratings calibrations.",
+    "SourceDate":"12/6/2015"
+  },
+  {
+    "Rank":"1",
+    "Headline":"CPMC Awareness: Working Together to Deliver the Best Technology Solutions",
+    "TargetID":"6808",
+    "TargetDesc":"Citi Global Program Management",
+    "AbstractNews":"Each and every one of us should recognize that technology, innovation, and control are essential to building the best solutions for our business. ",
+    "SourceDate":"11/23/2015"
+  },
+    {
+    "Rank":"2",
+    "Headline":"LEED Leader: Citi Focuses on the Environment in Belfast Gateway Development  ",
+    "TargetID":"16803",
+    "TargetDesc":"Global Public Affairs [L5]",
+    "AbstractNews":"Citi's attention to environmental issues in the Belfast Gateway offices earned a Leadership in Energy and Environmental Design (LEED) Gold certification. ",
+    "SourceDate":"11/16/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"Citi & NBC Announce Multi-Year Sponsorship, Launch Citi Concert Series on TODAY",
+    "TargetID":"20497",
+    "TargetDesc":"GCB O&T [L7]",
+    "AbstractNews":"The Citi Concert Series on TODAY will provide a year-round lineup of fan favorites, beginning with Selena Gomez, Carrie Underwood and 5 Seconds of Summer.",
+    "SourceDate":"12/7/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"Barry Rodrigues Announces Expanded Mobile Payments Capability to Android Users",
+    "TargetID":"20497",
+    "TargetDesc":"GCB O&T [L7]",
+    "AbstractNews":"In an email to employees, Barry Rodrigues, Head of Citi Enterprise Payments Solutions, announced Citi's new partnership with Android Pay and Samsung Pay, giving card holders more options for making purchases.",
+    "SourceDate":"12/7/2015"
   },
   {
     "Rank":"2",
@@ -112,69 +288,21 @@
     "AbstractNews":"Citi and The Wharton School of the University of Pennsylvania announced the formation of the Citi Wharton Global Wealth Institute to provide Citi's global advisor community with world-class business and executive training.",
     "SourceDate":"11/18/2015"
   },
-  {
-    "Rank":"999",
-    "Headline":"Nuggets of Wisdom from 19 CEOs to Their Younger Selves ",
-    "TargetID":"9908839",
-    "TargetDesc":"Retail Services ",
-    "AbstractNews":"_In an interview with _Inc., Bill Johnson, CEO Retail Services, and Brandee McHale, Citi Foundation President and Director of Corporate Citizenship, provide their take on wisdom they would give their younger selves.\n",
-    "SourceDate":"10/26/2015"
-  },
    {
     "Rank":"999",
     "Headline":"Citibank Winnows Down CMC 2015 Field to 20: Citi Mobile Challenge",
     "TargetID":"APAC",
     "TargetDesc":"APAC",
     "AbstractNews":"20 teams showcased their solutions at the first Asia Pacific Citi Mobile Challenge Demo Day in Bengaluru, the Deccan Herald reported. ",
-    "SourceDate":"11/4/2015"
+    "SourceDate":"12/4/2015"
   },
   {
     "Rank":"999",
-    "Headline":"Citi Works Revises the Way We Work",
-    "TargetID":"16312",
-    "TargetDesc":"Enterprise Infrastructure ",
-    "AbstractNews":"What if Citi could find a way to create dynamic workplaces that support diverse work styles, improve employee engagement, and help attract the next generation of talent ' all while saving Citi money? Citi Works allows Citi to do just that.",
-    "SourceDate":"11/5/2015"
-  },
-   {
-    "Rank":"2",
-    "Headline":"Citi Honduras: 50 Years of Supporting Clients, Colleagues and Communities ",
-    "TargetID":"16803",
-    "TargetDesc":"Global Public Affairs [L5]",
-    "AbstractNews":"At Citi Honduras, we believe in perseverance. For the past 50 years, it has enabled us to achieve our goals by tirelessly serving our clients, advancing their interests and helping to connect them with the world. Read this article in English and Espa'ol.",
-    "SourceDate":"11/4/2015"
-  },
-    {
-    "Rank":"999",
-    "Headline":"Advancing Financial Inclusion in India",
-    "TargetID":"16803",
-    "TargetDesc":"Global Public Affairs [L5]",
-    "AbstractNews":"Pramit Jhaveri, Chief Executive, Citi India, and Bob Annibale, Global Director, Citi Inclusive Finance, write about how Citi India is helping expand financial inclusion in India by providing capital to create economic opportunities across the country. ",
-    "SourceDate":"11/18/2015"
-  },
-   {
-    "Rank":"1",
-    "Headline":"'I Want to Be Just Like Every Other Guy': A New Life for Esteban",
-    "TargetID":"16803",
-    "TargetDesc":"Global Public Affairs [L5]",
-    "AbstractNews":"Esteban, a mentally challenged young man in Spain, learns life skills and starts to gain independence through a program funded with a Citi Foundation grant. ",
-    "SourceDate":"11/12/2015"
-  },
-    {
-    "Rank":"999",
-    "Headline":"First-Time Homebuyer Educational Webinar on October 29",
-    "TargetID":"9908839",
-    "TargetDesc":"Retail Services ",
-    "AbstractNews":"Please join us for a First-Time Homebuyer Educational Webinar hosted by your Citibank colleagues to help answer any questions you may have about taking the steps to owning your own home.",
-    "SourceDate":"10/5/2015"
-  },
-   {
-    "Rank":"999",
-    "Headline":"New Enterprise Infrastructure Intranet ",
-    "TargetID":"16312",
-    "TargetDesc":"Enterprise Infrastructure [L5]",
-    "AbstractNews":"New Enterprise Infrastructure Intranet ",
-    "SourceDate":"10/20/2015"
+    "Headline":"Connecting Citi",
+    "TargetID":"6808",
+    "TargetDesc":"Citi Global Program Management",
+    "AbstractNews":"Connecting Citi is a key component of our Citi Program Management Council�s Mission and is front and center in Citi's  Execution 2.0 Technology and Platforms Goals and Objectives. ",
+    "SourceDate":"11/23/2015"
   },
   {
     "Rank":"999",
@@ -182,15 +310,7 @@
     "TargetID":"EMEA",
     "TargetDesc":"EMEA",
     "AbstractNews":"Moving from up to 20 days to about 30 minutes for the credit card or loan application process in Poland, Russia and the UAE hasn't been easy but our team has found a way to take a lot of time out of the process by using four Execution 2.0 priorities.",
-    "SourceDate":"10/20/2015"
-  },
-  {
-    "Rank":"999",
-    "Headline":"Enterprise Supply Chain Celebrates First Year",
-    "TargetID":"16312",
-    "TargetDesc":"Enterprise Infrastructure ",
-    "AbstractNews":"It's been a year since Enterprise Supply Chain (ESC) was created to better integrate and manage Citi's Supply Chain from an end-to-end perspective.  To recognize its first year as an organization, September 28 ' October 2 was designated as ESC Week.  The ",
-    "SourceDate":"10/20/2015"
+    "SourceDate":"11/20/2015"
   },
   {
     "Rank":"999",
@@ -206,7 +326,7 @@
     "TargetID":"GBR",
     "TargetDesc":"United Kingdom",
     "AbstractNews":"Read the message from Jim Cowles & Bob Annibale about Citi's recognition in this annual survey aiming to show that no one will be held back by who they are.",
-    "SourceDate":"10/20/2015"
+    "SourceDate":"11/20/2015"
   },
     {
     "Rank":"999",
@@ -214,7 +334,7 @@
     "TargetID":"GBR",
     "TargetDesc":"United Kingdom",
     "AbstractNews":"Photography enthusiast and Citi employee, Marina Antoniou, showcases her work on people portraits from around the world. Join The Photograph Club next Wednesday October 28 for this enticing Bring Your Lunch and Learn session.",
-    "SourceDate":"10/19/2015"
+    "SourceDate":"11/19/2015"
   },
   {
     "Rank":"999",
@@ -222,7 +342,7 @@
     "TargetID":"GBR",
     "TargetDesc":"United Kingdom",
     "AbstractNews":"On Wednesday, October 21 in London, Citi will be sponsoring The Telegraph's new one-day conference, 'Britain's Smart Cities', looking at urbanization and development, and how this affects the growing global competition for business.  ",
-    "SourceDate":"10/19/2015"
+    "SourceDate":"11/19/2015"
   },
   {
     "Rank":"999",
@@ -232,6 +352,22 @@
     "AbstractNews":"Around 500 representatives from government agencies, financial services firms, microfinance institutions, non-profit organizations, technology providers and other key stakeholders will gather at the Makati Shangri-La in Manila from October 27 to 29, 2015.",
     "SourceDate":"11/18/2015"
   },
+    {
+    "Rank":"999",
+    "Headline":"The Latest Issue of Consumer Information Security News is Now Available",
+    "TargetID":"9908839",
+    "TargetDesc":"Retail Services ",
+    "AbstractNews":"Check out the October 2015 issue of Consumer Information Security news here on the HUB. ",
+    "SourceDate":"11/20/2015"
+  },
+   {
+    "Rank":"999",
+    "Headline":"Nuggets of Wisdom from 19 CEOs to Their Younger Selves ",
+    "TargetID":"9908839",
+    "TargetDesc":"Retail Services ",
+    "AbstractNews":"_In an interview with _Inc., Bill Johnson, CEO Retail Services, and Brandee McHale, Citi Foundation President and Director of Corporate Citizenship, provide their take on wisdom they would give their younger selves.\n",
+    "SourceDate":"11/26/2015"
+  }, 
   {
     "Rank":"999",
     "Headline":"Progress Makers: Preserving the Everglades for Future Generations",
@@ -242,11 +378,75 @@
   },
     {
     "Rank":"999",
+    "Headline":"Mark Gyurko Joins the Partner Management Strategic Initiatives Team",
+    "TargetID":"9908839",
+    "TargetDesc":"Retail Services ",
+    "AbstractNews":"Emily Rueth announced on Oct. 1, 2015, that Mark Gyurko has joined the Partner Management Strategic Initiatives team.",
+    "SourceDate":"12/2/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"There's a Reason It's Called a Difficult Conversation",
+    "TargetID":"6808",
+    "TargetDesc":"Citi Global Program Management",
+    "AbstractNews":" One of the greatest, and most common, challenges for people managers and individual contributors alike is managing difficult conversations. ",
+    "SourceDate":"11/23/2015"
+  },
+  {
+    "Rank":"3",
+    "Headline":"Jagdish's Corner: Mission and Value Proposition & Leadership Standards",
+    "TargetID":"16312",
+    "TargetDesc":"Enterprise Infrastructure",
+    "AbstractNews":"In this post, Jagdish shares his thoughts on the importance of employees understanding their role in ensuring Citi's Mission and Value Proposition and Leadership Standards become embedded within our culture. ",
+    "SourceDate":"12/5/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"PM Mentoring Program ",
+    "TargetID":"6808",
+    "TargetDesc":"Citi Global Program Management",
+    "AbstractNews":"Do you have at least 3 years of experience as a lead PM or have your PMP certification and would like to share your knowledge with the new generation of project or program managers? If so, this program needs you! ",
+    "SourceDate":"11/29/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"2015 EI  VOE Results",
+    "TargetID":"16312",
+    "TargetDesc":"Enterprise Infrastructure ",
+    "AbstractNews":"View results from the 2015 VOE Survey. ",
+    "SourceDate":"11/16/2015"
+  },
+    {
+    "Rank":"999",
+    "Headline":"IT Product Post Q3 2015",
+    "TargetID":"16312",
+    "TargetDesc":"Enterprise Infrastructure ",
+    "AbstractNews":"Stay in the know with the IT Product Post. ",
+    "SourceDate":"11/16/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"PANEL: Driving Retail Loyalty for Increasingly Connected Customers ",
+    "TargetID":"9908839",
+    "TargetDesc":"Retail Services ",
+    "AbstractNews":"Retail Services CEO Bill Johnson moderated a panel with our partners Macy's and Staples at the Oct. 2015 Money 20/20 conference.",
+    "SourceDate":"11/30/2015"
+  },
+    {
+    "Rank":"999",
     "Headline":"Citi Philippines Hosts First AML Compliance Workshop for Corporate Clients",
     "TargetID":"APAC",
     "TargetDesc":"APAC",
     "AbstractNews":"Reinforcing responsible finance and Citi's culture of Ethics as well as focus on Controls, Citi Philippines recently held its first Anti-Money Laundering (AML) Compliance Workshop for representatives from client banks. ",
-    "SourceDate":"10/18/2015"
+    "SourceDate":"11/18/2015"
+  },
+   {
+    "Rank":"999",
+    "Headline":"GCB Third Quarter 2015 Results",
+    "TargetID":"4462",
+    "TargetDesc":"GCB",
+    "AbstractNews":"A memo on Third Quarter results from Stephen Bird, Chief Executive Officer of Global Consumer Banking. ",
+    "SourceDate":"12/15/2015"
   },
   {
     "Rank":"999",
@@ -254,6 +454,6 @@
     "TargetID":"EMEA",
     "TargetDesc":"EMEA",
     "AbstractNews":"Citi provided a loan of USD3M to Jordan's pioneer of the microfinance field, Tamweelcom, to provide financial support to microfinance institutions in emerging markets.",
-    "SourceDate":"10/18/2015"
+    "SourceDate":"11/18/2015"
   }
   ]
