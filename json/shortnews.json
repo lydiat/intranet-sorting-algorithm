@@ -24,6 +24,22 @@
     "AbstractNews":"Citi has launched Citi' Payment Exchange, its integrated and highly flexible institutional payment-processing solution, in Canada. This follows the successful launch of the service in the U.S. in 2012. ",
     "SourceDate":"12/10/2015"
   },
+    {
+    "Rank":"1",
+    "Headline":"News Release: CitiFinancial Advances Youth Financial Literacy through $75,000 Pa",
+    "TargetID":"CAN",
+    "TargetDesc":"Canada",
+    "AbstractNews":"CitiFinancial is proud to announce a new partnership with Junior Achievement (JA) Canada, the largest provider of youth business education programs in Canada, to help advance youth financial literacy.",
+    "SourceDate":"12/2/2015"
+  },
+    {
+    "Rank":"999",
+    "Headline":"BNN: Citi takes bearish stance on Canada's housing",
+    "TargetID":"CAN",
+    "TargetDesc":"Canada",
+    "AbstractNews":"Dana Peterson, economist for Citi Canada, joined BNN's The Street to discuss Canada's housing market, and why signs point to a bearish outlook.",
+    "SourceDate":"11/18/2015"
+  },
   {
     "Rank":"1",
     "Headline":"J.D. Power and Associates U.S. Credit Card Satisfaction Study Results",
@@ -93,7 +109,7 @@
     "Headline":"Kenya: Nairobi Branch is Citi's Second LEED-Certified Building in Africa",
     "TargetID":"16803",
     "TargetDesc":"Global Public Affairs [L5]",
-    "AbstractNews":"Citi Kenya�s Gigiri branch in Nairobi has received LEED Gold certification. This is Citi's second LEED-certified building in Africa; the first is in Zambia.",
+    "AbstractNews":"Citi Kenya's Gigiri branch in Nairobi has received LEED Gold certification. This is Citi's second LEED-certified building in Africa; the first is in Zambia.",
     "SourceDate":"11/28/2015"
   },
    {
@@ -116,7 +132,7 @@
     "Rank":"999",
     "Headline":"Automatic Disablement of Staff Entitlements upon 45 Days Past Due Manager Review",
     "TargetID":"5497",
-    "TargetDesc":"Enterprise O&T ",
+    "TargetDesc":"Enterprise O&T",
     "AbstractNews":"One of the most important safeguards to protect Citi's information is a manager�s oversight of his or her staff�s access to systems and databases, following the EERS process.",
     "SourceDate":"11/23/2015"
   },
@@ -132,7 +148,7 @@
     "Rank":"999",
     "Headline":"First-Time Homebuyer Educational Webinar on October 29",
     "TargetID":"9908839",
-    "TargetDesc":"Retail Services ",
+    "TargetDesc":"Retail Services",
     "AbstractNews":"Please join us for a First-Time Homebuyer Educational Webinar hosted by your Citibank colleagues to help answer any questions you may have about taking the steps to owning your own home.",
     "SourceDate":"12/5/2015"
   },
@@ -148,7 +164,7 @@
     "Rank":"999",
     "Headline":"Message From Jonathan Larsen: The Future of Retail Banking and Mortgage",
     "TargetID":"4462",
-    "TargetDesc":"GCB",
+    "TargetDesc":"Globale Consumer Banking",
     "AbstractNews":"In a recent announcement, Global Head of Retail Banking Jonathan Larsen discusses how the U.S. Retail Banking and Mortgage organization is accelerating its progress to succeed in a rapidly changing mobile and digital world.",
     "SourceDate":"12/1/2015"
   },
@@ -392,6 +408,23 @@
     "AbstractNews":" One of the greatest, and most common, challenges for people managers and individual contributors alike is managing difficult conversations. ",
     "SourceDate":"11/23/2015"
   },
+    {
+    "Rank":"999",
+    "Headline":"Advancing Financial Inclusion in India",
+    "TargetID":"IND",
+    "TargetDesc":"India",
+    "AbstractNews":"Pramit Jhaveri, Chief Executive, Citi India, and Bob Annibale, Global Director, Citi Inclusive Finance, write about how Citi India is helping expand financial inclusion in India by providing capital to create economic opportunities across the country. ",
+    "SourceDate":"11/18/2015"
+  },
+ {
+    "Rank":"999",
+    "Headline":"Asia Pacific Citi Mobile Challenge Demo Day in Bengaluru",
+    "TargetID":"IND",
+    "TargetDesc":"India",
+    "AbstractNews":"20 impressive innovative banking solutions showcased at the first Citi Mobile Challenge Demo Day held in Bengaluru yesterday. ",
+    "SourceDate":"12/3/2015"
+  },
+
   {
     "Rank":"3",
     "Headline":"Jagdish's Corner: Mission and Value Proposition & Leadership Standards",
@@ -447,6 +480,70 @@
     "TargetDesc":"GCB",
     "AbstractNews":"A memo on Third Quarter results from Stephen Bird, Chief Executive Officer of Global Consumer Banking. ",
     "SourceDate":"12/15/2015"
+  },
+  {
+    "Rank":"3",
+    "Headline":"Latest LEAD cohort in Malaysia to Experience Enhanced Program ",
+    "TargetID":"MYS",
+    "TargetDesc":"Malaysia",
+    "AbstractNews":"The latest cohort of Citi Malaysia's Leadership Enhancement & Accelerated Development (LEAD) program, comprising 120 colleagues, will be undergoing an enhanced program.\n \n",
+    "SourceDate":"11/25/2015"
+  },
+  {
+    "Rank":"2",
+    "Headline":"Citi Malaysia Colleagues Come Together to Celebrate Hari Raya ",
+    "TargetID":"MYS",
+    "TargetDesc":"Malaysia",
+    "AbstractNews":"Over 1,000 Citi Malaysia colleagues came together last week to celebrate Hari Raya - the end of the fasting month of Ramadhan- at the rooftop of Menara Citibank - Citi's headquarters in Kuala Lumpur. ",
+    "SourceDate":"11/25/2015"
+  },
+  {
+    "Rank":"1",
+    "Headline":"Citi in Malaysia Raised RM217,941 for the Children of Nepal",
+    "TargetID":"MYS",
+    "TargetDesc":"Malaysia",
+    "AbstractNews":"Citibank Berhad today handed over a cheque for RM217,941 to United Nations Children's Fund (UNICEF) in aid for the children of Nepal.",
+    "SourceDate":"11/26/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"Ringing the Opening Bell on Wall Street for Citi and VOWS",
+    "TargetID":"NAM",
+    "TargetDesc":"NAM",
+    "AbstractNews":"_In support of the 2015 observance of Veterans Day, John Tien was honored to help ring the NYSE opening bell on November 9 on behalf of Citi and our firm-wide support of the financial services industry organization, Veterans On Wall Street (VOWS). ",
+    "SourceDate":"11/11/2015"
+  },
+  {
+    "Rank":"1",
+    "Headline":"Introduction of Citi Smart Banking in the U.S.",
+    "TargetID":"USA",
+    "TargetDesc":"United States",
+    "AbstractNews":"The New York Times reports on Citi's first full Smart Branch and Citigold Client Center in the United States. Global Head of Retail Banking and Mortgage Jonathan Larsen discussed the new digital features of Citi's Smart Branch.",
+    "SourceDate":"11/13/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"Know Your Value Livestream",
+    "TargetID":"USA",
+    "TargetDesc":"United States",
+    "AbstractNews":"On Friday, November 20, Citi will continue its sponsorship of Know Your Value, a five-city event focused on women's empowerment in the workplace. Find out how you can join the event.",
+    "SourceDate":"11/18/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"Citi Wins Cool Business Awards with Agent-Based Voice Authentication Initiative",
+    "TargetID":"USA",
+    "TargetDesc":"United States",
+    "AbstractNews":"Symposium attendees named Citi's voice biometrics authentication project Most Promising Digital Business Transformation Initiative and then selected it from all category winners for Digital Champion for the Americas.�",
+    "SourceDate":"11/19/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"Progress Makers: Homes for Heroes ",
+    "TargetID":"USA",
+    "TargetDesc":"United States",
+    "AbstractNews":"The New England Center & Home for Veterans in Boston wanted to expand their facilities to aid more veterans. Citi's expertise working with government & community organizations put the bank in a unique position to help arrange & provide the needed funds.",
+    "SourceDate":"12/6/2015"
   },
   {
     "Rank":"999",
