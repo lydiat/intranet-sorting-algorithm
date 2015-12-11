@@ -20,7 +20,7 @@
     "Headline":"Press Release: Citi Expands Citi Payment Exchange into Canada",
     "TargetID":"CAN",
     "TargetDesc":"Canada",
-    "AbstractNews":"Citi has launched Citi� Payment Exchange, its integrated and highly flexible institutional payment-processing solution, in Canada. This follows the successful launch of the service in the U.S. in 2012. ",
+    "AbstractNews":"Citi has launched Citi' Payment Exchange, its integrated and highly flexible institutional payment-processing solution, in Canada. This follows the successful launch of the service in the U.S. in 2012. ",
     "SourceDate":"12/10/2015"
   },
   {
@@ -52,15 +52,16 @@
     "Headline":"Virginia Attorney General Herring will seek second term, not run for governor",
     "TargetID":"9905249",
     "TargetDesc":"Global Gov Affairs [L6]",
-    "AbstractNews":"Surprising many, Virginia Attorney General Mark R. Herring announced last week that he will seek a second term as AG and will not seek to be the Democrats� 2017 gubernatorial nominee.",
+    "AbstractNews":"Surprising many, Virginia Attorney General Mark R. Herring announced last week that he will seek a second term as AG and will not seek to be the Democrats' 2017 gubernatorial nominee.",
     "SourceDate":"12/08/2015"
   },
+
   {
     "Rank":"999",
     "Headline":"Illinois Gov. vetoes data breach bill supported by AG Madigan",
     "TargetID":"9905249",
     "TargetDesc":"Global Gov Affairs [L6]",
-    "AbstractNews":"On August 21, Illinois Governor Bruce Rauner (R) issued a much sought after amendatory veto of data breach legislation championed by Attorney General Lisa Madigan (D). The General Assembly will have an opportunity to override Rauner�s veto later this fall",
+    "AbstractNews":"On August 21, Illinois Governor Bruce Rauner (R) issued a much sought after amendatory veto of data breach legislation championed by Attorney General Lisa Madigan (D). The General Assembly will have an opportunity to override Rauner's veto later this fall",
     "SourceDate":"12/08/2015"
   },
   {
@@ -84,7 +85,7 @@
     "Headline":"The Search for Growth and Stability Amidst Deflation and Divergence",
     "TargetID":"EMEA",
     "TargetDesc":"EMEA",
-    "AbstractNews":"Citi�s Global Chief Economist, Willem Buiter and Head of Emerging Market Economics, David Lubin spoke at a thought leadership panel event co-hosted by Citi and the FT during the IMF / World Bank annual meeting in Lima, Peru. ",
+    "AbstractNews":"Citi's Global Chief Economist, Willem Buiter and Head of Emerging Market Economics, David Lubin spoke at a thought leadership panel event co-hosted by Citi and the FT during the IMF / World Bank annual meeting in Lima, Peru. ",
     "SourceDate":"12/04/2015"
   },
   {
@@ -97,43 +98,139 @@
   },
   {
     "Rank":"999",
-    "Headline":"Jeff Bienstock - Your Opinion Counts - Take the Voice of the Employee Survey",
-    "TargetID":"12522",
-    "TargetDesc":"Office of the CTO ",
-    "AbstractNews":"Please complete your VOE Survey by September 30.",
-    "SourceDate":"11/30/2015"
-  },
-  {
-    "Rank":"999",
-    "Headline":"David Rafalovky - Your Opinion Counts: Take the Voice of the Employee Survey",
-    "TargetID":"12522",
-    "TargetDesc":"Office of the CTO ",
-    "AbstractNews":"Please complete your VOE Survey by September 30.",
-    "SourceDate":"11/30/2015"
-  },
-  {
-    "Rank":"999",
-    "Headline":"No Further Expansion of Non-Strategic Hardware for Existing Applications",
-    "TargetID":"12522",
-    "TargetDesc":"Office of the CTO ",
-    "AbstractNews":"Plan timely re-platforming for non-strategic platform hosts nearing resource capacity limitations.",
-    "SourceDate":"11/30/2015"
-  },
-  {
-    "Rank":"999",
-    "Headline":"REMINDER | Lunch & Learn Session hosted by Citi Professional Recruiting",
-    "TargetID":"12522",
-    "TargetDesc":"Office of the CTO ",
-    "AbstractNews":"Join Enterprise Technology Executive Recruiter Kelli Brown as she talks about the criteria of moving in to a new role, how to search and apply for positions, and details on Citi�s referral program.",
-    "SourceDate":"11/30/2015"
-  },
-  {
-    "Rank":"999",
     "Headline":"Jason Channell on Energy Darwinism and Opportunities for the Future",
     "TargetID":"GLOBAL",
     "TargetDesc":"Global",
-    "AbstractNews":"Jason Channell, Global Head of Alternative Energy and Cleantech Research, discusses Citi�s analysis in the recent Global Perspectives & Solutions (GPS) report, \"Energy Darwinism II.\"",
+    "AbstractNews":"Jason Channell, Global Head of Alternative Energy and Cleantech Research, discusses Citi's analysis in the recent Global Perspectives & Solutions (GPS) report, \"Energy Darwinism II.\"",
     "SourceDate":"11/30/2015"
+  },
+   {
+    "Rank":"999",
+    "Headline":"Citi and The Wharton School: Multi-Year Global Executive Education Program ",
+    "TargetID":"APAC",
+    "TargetDesc":"APAC",
+    "AbstractNews":"Citi and The Wharton School of the University of Pennsylvania announced the formation of the Citi Wharton Global Wealth Institute to provide Citi's global advisor community with world-class business and executive training.",
+    "SourceDate":"11/18/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"Nuggets of Wisdom from 19 CEOs to Their Younger Selves ",
+    "TargetID":"9908839",
+    "TargetDesc":"Retail Services ",
+    "AbstractNews":"_In an interview with _Inc., Bill Johnson, CEO Retail Services, and Brandee McHale, Citi Foundation President and Director of Corporate Citizenship, provide their take on wisdom they would give their younger selves.\n",
+    "SourceDate":"10/26/2015"
+  },
+   {
+    "Rank":"999",
+    "Headline":"Citibank Winnows Down CMC 2015 Field to 20: Citi Mobile Challenge",
+    "TargetID":"APAC",
+    "TargetDesc":"APAC",
+    "AbstractNews":"20 teams showcased their solutions at the first Asia Pacific Citi Mobile Challenge Demo Day in Bengaluru, the Deccan Herald reported. ",
+    "SourceDate":"11/4/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"Citi Works Revises the Way We Work",
+    "TargetID":"16312",
+    "TargetDesc":"Enterprise Infrastructure ",
+    "AbstractNews":"What if Citi could find a way to create dynamic workplaces that support diverse work styles, improve employee engagement, and help attract the next generation of talent ' all while saving Citi money? Citi Works allows Citi to do just that.",
+    "SourceDate":"11/5/2015"
+  },
+   {
+    "Rank":"2",
+    "Headline":"Citi Honduras: 50 Years of Supporting Clients, Colleagues and Communities ",
+    "TargetID":"16803",
+    "TargetDesc":"Global Public Affairs [L5]",
+    "AbstractNews":"At Citi Honduras, we believe in perseverance. For the past 50 years, it has enabled us to achieve our goals by tirelessly serving our clients, advancing their interests and helping to connect them with the world. Read this article in English and Espa'ol.",
+    "SourceDate":"11/4/2015"
+  },
+    {
+    "Rank":"999",
+    "Headline":"Advancing Financial Inclusion in India",
+    "TargetID":"16803",
+    "TargetDesc":"Global Public Affairs [L5]",
+    "AbstractNews":"Pramit Jhaveri, Chief Executive, Citi India, and Bob Annibale, Global Director, Citi Inclusive Finance, write about how Citi India is helping expand financial inclusion in India by providing capital to create economic opportunities across the country. ",
+    "SourceDate":"11/18/2015"
+  },
+   {
+    "Rank":"1",
+    "Headline":"'I Want to Be Just Like Every Other Guy': A New Life for Esteban",
+    "TargetID":"16803",
+    "TargetDesc":"Global Public Affairs [L5]",
+    "AbstractNews":"Esteban, a mentally challenged young man in Spain, learns life skills and starts to gain independence through a program funded with a Citi Foundation grant. ",
+    "SourceDate":"11/12/2015"
+  },
+    {
+    "Rank":"999",
+    "Headline":"First-Time Homebuyer Educational Webinar on October 29",
+    "TargetID":"9908839",
+    "TargetDesc":"Retail Services ",
+    "AbstractNews":"Please join us for a First-Time Homebuyer Educational Webinar hosted by your Citibank colleagues to help answer any questions you may have about taking the steps to owning your own home.",
+    "SourceDate":"10/5/2015"
+  },
+   {
+    "Rank":"999",
+    "Headline":"New Enterprise Infrastructure Intranet ",
+    "TargetID":"16312",
+    "TargetDesc":"Enterprise Infrastructure [L5]",
+    "AbstractNews":"New Enterprise Infrastructure Intranet ",
+    "SourceDate":"10/20/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"Execution 2.0 in EMEA: How We Went from 20 Days to 30 Minutes",
+    "TargetID":"EMEA",
+    "TargetDesc":"EMEA",
+    "AbstractNews":"Moving from up to 20 days to about 30 minutes for the credit card or loan application process in Poland, Russia and the UAE hasn't been easy but our team has found a way to take a lot of time out of the process by using four Execution 2.0 priorities.",
+    "SourceDate":"10/20/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"Enterprise Supply Chain Celebrates First Year",
+    "TargetID":"16312",
+    "TargetDesc":"Enterprise Infrastructure ",
+    "AbstractNews":"It's been a year since Enterprise Supply Chain (ESC) was created to better integrate and manage Citi's Supply Chain from an end-to-end perspective.  To recognize its first year as an organization, September 28 ' October 2 was designated as ESC Week.  The ",
+    "SourceDate":"10/20/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"Citi and The Wharton School: Multi-Year Global Executive Education Program",
+    "TargetID":"GLOBAL",
+    "TargetDesc":"Global",
+    "AbstractNews":"Citi and The Wharton School of the University of Pennsylvania announced the formation of the Citi Wharton Global Wealth Institute to provide Citi's global advisor community with world-class business and executive training.",
+    "SourceDate":"11/18/2015"
+  },
+    {
+    "Rank":"3",
+    "Headline":"Citi Recognized for LGBT Leadership by Financial Times and OUTstanding",
+    "TargetID":"GBR",
+    "TargetDesc":"United Kingdom",
+    "AbstractNews":"Read the message from Jim Cowles & Bob Annibale about Citi's recognition in this annual survey aiming to show that no one will be held back by who they are.",
+    "SourceDate":"10/20/2015"
+  },
+    {
+    "Rank":"999",
+    "Headline":"Photography Club: Bring Your Lunch and Learn with Marina Antoniou",
+    "TargetID":"GBR",
+    "TargetDesc":"United Kingdom",
+    "AbstractNews":"Photography enthusiast and Citi employee, Marina Antoniou, showcases her work on people portraits from around the world. Join The Photograph Club next Wednesday October 28 for this enticing Bring Your Lunch and Learn session.",
+    "SourceDate":"10/19/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"Citi to Sponsor Telegraph's Britain's Smart Cities",
+    "TargetID":"GBR",
+    "TargetDesc":"United Kingdom",
+    "AbstractNews":"On Wednesday, October 21 in London, Citi will be sponsoring The Telegraph's new one-day conference, 'Britain's Smart Cities', looking at urbanization and development, and how this affects the growing global competition for business.  ",
+    "SourceDate":"10/19/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"Announcing the Inaugural Asia-Pacific Financial Inclusion Summit ",
+    "TargetID":"APAC",
+    "TargetDesc":"APAC",
+    "AbstractNews":"Around 500 representatives from government agencies, financial services firms, microfinance institutions, non-profit organizations, technology providers and other key stakeholders will gather at the Makati Shangri-La in Manila from October 27 to 29, 2015.",
+    "SourceDate":"11/18/2015"
   },
   {
     "Rank":"999",
@@ -142,5 +239,21 @@
     "TargetDesc":"GLOBAL",
     "AbstractNews":"In this Progress Portal article, Citi's Michael Hole, Managing Director, Municipal Securities Division, writes about how his work with the South Florida Water Management District is helping to save Florida's Everglades.",
     "SourceDate":"11/30/2015"
+  },
+    {
+    "Rank":"999",
+    "Headline":"Citi Philippines Hosts First AML Compliance Workshop for Corporate Clients",
+    "TargetID":"APAC",
+    "TargetDesc":"APAC",
+    "AbstractNews":"Reinforcing responsible finance and Citi's culture of Ethics as well as focus on Controls, Citi Philippines recently held its first Anti-Money Laundering (AML) Compliance Workshop for representatives from client banks. ",
+    "SourceDate":"10/18/2015"
+  },
+  {
+    "Rank":"999",
+    "Headline":"Citi Supports Jordan's Microfinance Sector with Extended $3M Loan ",
+    "TargetID":"EMEA",
+    "TargetDesc":"EMEA",
+    "AbstractNews":"Citi provided a loan of USD3M to Jordan's pioneer of the microfinance field, Tamweelcom, to provide financial support to microfinance institutions in emerging markets.",
+    "SourceDate":"10/18/2015"
   }
   ]
