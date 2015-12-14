@@ -18,8 +18,10 @@ $(document).ready(function() {
   var rankedNews = {};
   var sortedRankedNews = {};
   var countryCode, orgCode, dateCode, regionCode;
+  var tweakRank = [];
   var html = "";
 
+  // set click handler for form submit button
   $('button').on('click', function() {
     var formType = $(this).data('form');
     submitForm(formType);
@@ -35,55 +37,70 @@ $(document).ready(function() {
     };
   }
 
-  // set up click handler for parsing articles
-  /*$('.parse').on('click', function() {
-    $('.parsed').empty();
-    rankNewsArticles();
-  });*/
+  // append tooltips based on titles to learn ranking for articles
+  // courtesey of http://stackoverflow.com/posts/6629864/revisions
+  function tooltipForNewRank(){
+   $('body').append('<div class="tooltip"><div class="tipBody"></div></div>'); 
+    var tip; // make it global
+    $('a[title]').mouseover(function(e) { // no need to point to 'rel'. Just if 'a' has [title] attribute.
+        tip = $(this).attr('title'); // tip = this title   
+        $(this).attr('title','');    // empty title
+        $('.tooltip').fadeTo(100, 0.9).children('.tipBody').html( tip ); // fade tooltip and populate .tipBody
+    }).mousemove(function(e) {
+        $('.tooltip').css('top', e.pageY + 10 ); // mouse follow!
+        $('.tooltip').css('left', e.pageX + 20 );
+    }).mouseout(function(e) {
+        $('.tooltip').hide(); // mouseout: HIDE Tooltip (do not use fadeTo or fadeOut )
+        $(this).attr( 'title', tip ); // reset title attr
+    });
+  }
 
-  // tally form data and display
+  // tally form data 
   function runForm(status) {
     $('.parsed').empty();
     var formNumbers = $("form").serialize();
     $('.algorithm').html('');
     $.each(formNumbers.split('&'), function(index, elem) {
       var vals = elem.split('=');
+
       if (vals[0] == 'date') {
         vals[1] = decodeURIComponent(vals[1]);
         dateCode = vals[1];
-        console.log(dateCode);
       }
-      if (vals[0] == 'organization') {
+      else if (vals[0] == 'organization') {
         orgCode = vals[1];
-        console.log(orgCode);
+
+        // process for business codes
+        if ($.inArray(orgCode, ['','']) !== -1){
+          busCode = 1;
+        }
       }
-      if (vals[0] == 'country') {
+      else if (vals[0] == 'country') {
         countryCode = vals[1].toLowerCase();
-        console.log(countryCode);
-        // account for region codes
+
+        // process for region codes
         if ($.inArray(countryCode, ['ind', 'mys', 'hkg']) !== -1) {
           regionCode = "apac";
         } else if ($.inArray(countryCode, ['usa', 'can']) !== -1) {
           regionCode = "nam";
         } else {
           regionCode = "emea";
-        };
-        console.log(regionCode);
-
+        }
+      } 
+      else {
+        var x = vals[0].split('-');
+        var y = x[0] + x[1];
+        tweakRank[y] = (vals[1]) ?  vals[1] : 1;
       }
-      //if (vals[1]) {
-      //  $('.algorithm').append(vals[0] + " = " + vals[1] + "<br />");
-      //}
+
     });
-    // $('.parse').fadeIn();
     $('.parsed').empty();
     if (status == "new") {
       newRankNewsArticles();
     } else {
       oldRankNewsArticles();
     }
-
-  };
+  }
 
   // parse date into ranking
   function dateToTimerank(dateString) {
@@ -91,7 +108,7 @@ $(document).ready(function() {
     var sourceDateParts = decodedSourceDate.split(/[.,\/ -]/);
     var sourceDate = new Date(sourceDateParts[2], parseInt(sourceDateParts[0], 10) - 1, sourceDateParts[1], 0, 0, 0, 0);
     var sourceTimestamp = sourceDate.getTime() / 1000;
-    console.log(dateString);
+    //console.log(dateString);
 
     var chosenTimeStamp = dateCode;
     var chosenDateParts = chosenTimeStamp.split(/[.,\/ -]/);
@@ -113,11 +130,13 @@ $(document).ready(function() {
     } else {
       rank = -100;
     }
-    return rank;
+    return rank
   }
 
-  // get news and create
+  // get news and create array from json
   function newRankNewsArticles() {
+    //console.log(tweakRank);
+
     $.getJSON("json/shortnews.json", function(json) {
       $.each(json, function(i, val) {
 
@@ -125,41 +144,47 @@ $(document).ready(function() {
         var valRank = val["Rank"];
         if (valRank <= 3 && valRank != 999) {
           valRank = (valRank * -1) + 4;
+          valRank = valRank * tweakRank['ranktweak'];
         } else {
           valRank = 0;
         }
 
         //set date rank value
         var valDate = val["SourceDate"];
-        var valDate = dateToTimerank(valDate);
-        var valDate = Math.round(valDate);
+        valDate = dateToTimerank(valDate);
+        valDate = Math.round(valDate);
+        valDate = valDate * tweakRank['datetweak'];
 
         //set target rank value
         var valTarget = val["TargetID"].toLowerCase();
 
         //if global give a rank of 2
         if (valTarget == 'global') {
-          valTarget = 2;
+          valTarget = 2 * tweakRank['globaltweak'];
         }
-
-        //if target ID matches country or org, give rank of 1
-        else if (valTarget == countryCode || valTarget == orgCode || valTarget == regionCode) {
-          valTarget = 1;
-        } else {
+        //if target ID matches country or org, give rank of 1 or boost
+        else if (valTarget == countryCode){
+          valTarget = tweakRank['countrytweak'];
+        } 
+        else if (valTarget == orgCode){
+          valTarget = tweakRank['leveltweak'];
+        } 
+        else if (valTarget == regionCode){
+           valTarget = tweakRank['regiontweak'];
+        }
+        else {
           valTarget = 0;
         }
 
         //add values and create new object with them as keys
         var total = valRank + valDate + valTarget;
-        console.log(val["Headline"] + ":");
-        console.log(" rank " + valRank + " | date  " + valDate + " | target  " + valTarget + " | total " + total);
-
         var totalSafe = total + 500 + "+" + i; // account for negative numbers
-        //console.log(totalSafe);
         rankedNews[totalSafe] = val;
         rankedNews[totalSafe]["totalRank"] = totalSafe;
+
+        var tooltip = " rank " + valRank + " + date  " + valDate + " + target  " + valTarget + " = " + total;
+        rankedNews[totalSafe]["tooltip"] = tooltip;
       });
-      //console.log(rankedNews);
       sortRankedNews(rankedNews);
     });
   }
@@ -191,11 +216,12 @@ $(document).ready(function() {
         } else if (valTarget == regionCode) {
           rankedNews['region'][i] = val;
         }
-      })
+      });
       oldSortRankedNews(rankedNews);
     });
-  };
+  }
 
+  // parse news articles according to old algorithm and section into columns
   function oldSortRankedNews(articles) {
 
     $('.parsed').load('templates/template_old.html', function() {
@@ -214,7 +240,7 @@ $(document).ready(function() {
             id = thisVal['TargetID'];
 
             sectionTitle = capitalizeFirstLetter(desc);
-            console.log(sectionTitle);
+           // console.log(sectionTitle);
 
             if (title.length > 100) {
               title = $.trim(title).substring(0, 100).split(" ").slice(0, -1).join(" ") + "...";
@@ -229,29 +255,30 @@ $(document).ready(function() {
             $('.parsed .'+section+' h3').html(sectionTitle);
             i++;
 
-          };
+          }
           if (i > 2)
             break;
-        };
+        }
 
       });
       $.each($('.headline a'), function(count, elem){
-        if($(elem).html() == ''){
+        if($(elem).html() === '') {
           $(this).parent('.headline').siblings('.more').hide();
         }
       });
-
     });
-  };
+  }
 
+  // one day javascript will have strtocap
   function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
+  // sort the ranked articles
   function sortRankedNews(articles) {
     var keys = [];
     var k;
-    for (article in articles) {
+    for(article in articles){
       if (articles.hasOwnProperty(article)) {
         keys.push(article);
       }
@@ -283,7 +310,8 @@ $(document).ready(function() {
         text = val['AbstractNews'];
         desc = val['TargetDesc'];
         id = val['TargetID'];
-        rank = val['totalRank'] - 500;
+        //rank = val['totalRank'] - 500;
+        tooltip = val['tooltip'];
 
         if (title.length > 100) {
           title = $.trim(title).substring(0, 100).split(" ").slice(0, -1).join(" ") + "...";
@@ -292,11 +320,14 @@ $(document).ready(function() {
           text = $.trim(text).substring(0, 200).split(" ").slice(0, -1).join(" ") + "...";
         }
 
-        $('.parsed .headline:eq(' + i + ') a').html(title)
-        $('.parsed .date:eq(' + i + ')').html(date)
-        $('.parsed .text:eq(' + i + ')').html(text)
+        $('.parsed .headline:eq(' + i + ') a').prop('title', tooltip);
+        $('.parsed .headline:eq(' + i + ') a').html(title);
+        $('.parsed .date:eq(' + i + ')').html(date);
+        $('.parsed .text:eq(' + i + ')').html(text);
 
       });
+     tooltipForNewRank();
+
 
     });
 
