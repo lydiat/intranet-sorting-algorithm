@@ -14,15 +14,17 @@ $(document).ready(function() {
   });
 
   // define vars
-  var articleLimit = 14;
-  var rankedNews = {};
-  var sortedRankedNews = {};
-  var countryCode, orgCode, dateCode, regionCode;
-  var tweakRank = [];
-  var html = "";
+    var articleLimit = 14;
+    var rankedNews = {};
+    var sortedRankedNews = {};
+    var countryCode, orgCode, subOrgCode, dateCode, regionCode, firstParentOrgCode, secondParentOrgCode;
+    var tweakRank = [];
+    var html = "";
+
 
   // set click handler for form submit button
   $('button').on('click', function() {
+  //  resetAllVars();
     var formType = $(this).data('form');
     submitForm(formType);
   });
@@ -70,11 +72,31 @@ $(document).ready(function() {
       else if (vals[0] == 'organization') {
         orgCode = vals[1];
 
-        // process for business codes
-        if ($.inArray(orgCode, ['','']) !== -1){
-          busCode = 1;
+        if (orgCode === '9908839'){ //Retail Services
+          firstParentOrgCode = '4463';
+          firstParentTitle = 'Cards';
+          secondParentOrgCode = '4462';
+          secondParentTitle = 'GCB';
         }
+        else if (orgCode === '20497'){ //GCB O&T
+          firstParentOrgCode = '4586';
+          firstParentTitle = 'Retail Banking'
+          secondParentOrgCode = '4462';
+          secondParentTitle = 'GCB';
+        }
+        else if (orgCode === '6808') { //CMPC
+          firstParentOrgCode = '16312';
+          firstParentTitle = 'Enterprise Infrastructure';
+          secondParentOrgCode = '5497';
+          secondParentTitle = 'Enterprise O&T';
+        }
+        else if (orgCode === '16312' ){ // Enterprise Infrastructure
+          firstParentOrgCode = '5497'
+          firstParentTitle = 'Enterprise O&T';
+        }
+        orgTitle = vals[1];
       }
+
       else if (vals[0] == 'country') {
         countryCode = vals[1].toLowerCase();
 
@@ -87,6 +109,7 @@ $(document).ready(function() {
           regionCode = "emea";
         }
       } 
+
       else {
         var x = vals[0].split('-');
         var y = x[0] + x[1];
@@ -110,8 +133,7 @@ $(document).ready(function() {
     var sourceTimestamp = sourceDate.getTime() / 1000;
     //console.log(dateString);
 
-    var chosenTimeStamp = dateCode;
-    var chosenDateParts = chosenTimeStamp.split(/[.,\/ -]/);
+    var chosenDateParts = dateCode.split(/[.,\/ -]/);
     var chosenDate = new Date(chosenDateParts[2], parseInt(chosenDateParts[0], 10) - 1, chosenDateParts[1], 0, 0, 0, 0);
     var chosenTimestamp = chosenDate.getTime() / 1000;
 
@@ -144,36 +166,39 @@ $(document).ready(function() {
         var valRank = val["Rank"];
         if (valRank <= 3 && valRank != 999) {
           valRank = (valRank * -1) + 4;
-          valRank = valRank * tweakRank['ranktweak'];
+          var valRank = valRank * tweakRank['ranktweak'];
+  //        console.log("valrank" + valRank);
         } else {
-          valRank = 0;
+          var valRank = 0;
         }
 
         //set date rank value
         var valDate = val["SourceDate"];
         valDate = dateToTimerank(valDate);
         valDate = Math.round(valDate);
-        valDate = valDate * tweakRank['datetweak'];
+        var valDate = valDate * tweakRank['datetweak'];
+
 
         //set target rank value
         var valTarget = val["TargetID"].toLowerCase();
 
         //if global give a rank of 2
         if (valTarget == 'global') {
-          valTarget = 2 * tweakRank['globaltweak'];
+          var valTarget = 2 * tweakRank['globaltweak'];
         }
         //if target ID matches country or org, give rank of 1 or boost
         else if (valTarget == countryCode){
-          valTarget = tweakRank['countrytweak'];
+          var valTarget = tweakRank['countrytweak'];
+        //  console.log(valTarget);
         } 
         else if (valTarget == orgCode){
-          valTarget = tweakRank['leveltweak'];
+          var valTarget = tweakRank['leveltweak'];
         } 
         else if (valTarget == regionCode){
-           valTarget = tweakRank['regiontweak'];
+           var valTarget = tweakRank['regiontweak'];
         }
         else {
-          valTarget = 0;
+           var valTarget = 0;
         }
 
         //add values and create new object with them as keys
@@ -183,6 +208,7 @@ $(document).ready(function() {
         rankedNews[totalSafe]["totalRank"] = totalSafe;
 
         var tooltip = " rank " + valRank + " + date  " + valDate + " + target  " + valTarget + " = " + total;
+        tooltip += " || Target Description is '" + val["TargetDesc"] + "'";
         rankedNews[totalSafe]["tooltip"] = tooltip;
       });
       sortRankedNews(rankedNews);
@@ -202,6 +228,8 @@ $(document).ready(function() {
       rankedNews['region'] = [];
       rankedNews['country'] = [];
       rankedNews['org'] = [];
+      rankedNews['firstparentorg'] = [];
+      rankedNews['secondparentorg'] = [];
 
       $.each(json, function(i, val) {
 
@@ -215,6 +243,10 @@ $(document).ready(function() {
           rankedNews['org'][i] = val;
         } else if (valTarget == regionCode) {
           rankedNews['region'][i] = val;
+        } else if(valTarget == firstParentOrgCode){
+          rankedNews['firstparentorg'][i] = val;
+        } else if(valTarget == secondParentOrgCode){
+          rankedNews['secondparentorg'][i] = val;
         }
       });
       oldSortRankedNews(rankedNews);
@@ -266,6 +298,11 @@ $(document).ready(function() {
           $(this).parent('.headline').siblings('.more').hide();
         }
       });
+      $.each($('.parsed h3'), function(count, elem){
+        if($(elem).html() === ''){
+          $(this).parent('.cont').hide();
+        }
+      });
     });
   }
 
@@ -273,6 +310,10 @@ $(document).ready(function() {
   function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
+
+  function isNumeric(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
 
   // sort the ranked articles
   function sortRankedNews(articles) {
@@ -294,11 +335,11 @@ $(document).ready(function() {
       sortedRankedNews[i] = articles[k];
     }
 
-    displayInTemplate(sortedRankedNews);
+    displayInNewTemplate(sortedRankedNews);
   }
 
   // take sorted array of articles and place in template
-  function displayInTemplate(articles) {
+  function displayInNewTemplate(articles) {
     var j = 0;
 
     $('.parsed').load('templates/template_new.html', function() {
@@ -327,7 +368,6 @@ $(document).ready(function() {
 
       });
      tooltipForNewRank();
-
 
     });
 
