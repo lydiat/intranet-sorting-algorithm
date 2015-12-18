@@ -41,10 +41,10 @@ $(document).ready(function() {
 
 /*
 
-potential code for future dynamic array search in case Citi would like to add more organizations to the citiorgstructure.json
+potential code for future dynamic array search to add more organizations to the orgstructure.json
 
 function searchOrgArray(num){
-  $.getJSON("json/citiorgstructure.json", function(json) {
+  $.getJSON("json/orgstructure.json", function(json) {
     return json.find(parseOrgArray,[num]);
   });
 };
