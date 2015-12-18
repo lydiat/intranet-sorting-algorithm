@@ -1,0 +1,30 @@
+[
+	{ 
+		"16803":"GCB"
+	},
+    { 	
+    	"4462":"GCB",
+        "children":[
+		    { 	"4463":"Cards",
+		    	"children": [
+		    		{	"9908839":"Retail Services"		}
+		    	]
+		    },
+		    { 	"4586":"Retail Banking",
+		    	"children":[
+		    		{	"20497":"GCB O&T"	}
+		    	]
+		    }
+		 ]
+	},
+	{ 	
+		"5497": "Enterprise O&T",
+		"children":[
+			{	"16312":"Enterprise Infrastructure",
+				"children": [
+					{	"6808": "Citi Global Program Management"	}
+				]
+			}
+		]
+	}
+]

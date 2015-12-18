@@ -1,0 +1,40 @@
+[
+	{ "id":"16803",
+		"desc":"GCB"
+	},
+    { 	"id":"4462",
+    	"desc":"GCB",
+        "children":[
+		    { 	"id":"4463",
+		    	"desc": "Cards",
+		    	"children": [
+		    		{	"id":"9908839",
+		    			"desc": "Retail Services"
+		    		}
+		    	]
+		    },
+		    { 	"id":"4586",
+		    	"desc":"Retail Banking",
+		    	"children":[
+		    		{	"id":"20497",
+		    			"desc":"GCB O&T"
+		    		}
+		    	]
+		    }
+		 ]
+	},
+	{ 	"id": "5497",
+		"desc": "Enterprise O&T",
+		"children":[
+			{	"id":"16312",
+				"desc": "Enterprise Infrastructure",
+				"children": [
+					{	"id": "6808",
+						"desc": "Citi Global Program Management"
+
+					}
+				]
+			}
+		]
+	}
+]
