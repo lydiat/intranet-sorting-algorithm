@@ -5,5 +5,5 @@ This is a small Javascript app that takes JSON files of news articles and sorts 
 
 ### How do I get set up? ###
 
-* Straight up JavaScript. No frameworks no tests no taskrunners. Easy peasy!
+* Straight up jQuery/JavaScript. No frameworks no tests no taskrunners. Easy peasy!
 
