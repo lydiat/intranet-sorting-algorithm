@@ -28,6 +28,9 @@ $(document).ready(function() {
     submitForm(formType);
   });
 
+      tooltipForNewRank();
+
+
   // bypass normal form submission
   function submitForm(status) {
     var form = document.getElementById('paraform');
@@ -130,16 +133,16 @@ if(element.id === $(this)[0]){
         }
         orgTitle = vals[1];
       } else if (vals[0] == 'country') {
-        countryCode = vals[1].toLowerCase();
+        countryCode = vals[1];
 
         // process for region codes
-        if ($.inArray(countryCode, ['ind', 'mys', 'hkg']) !== -1) {
-          regionCode = "apac";
-        } else if ($.inArray(countryCode, ['usa', 'can']) !== -1) {
-          regionCode = "nam";
-        } else {
-          regionCode = "emea";
-        }
+        $.getJSON("json/countries.json", function(json) {
+           $.each(json, function(i, val) {
+              if(val.TargetID === countryCode){
+                regionCode = val.TargetRegion.toLowerCase();;
+              }
+           });
+        });
       } else {
         // values for boosting rankings
         var x = vals[0].split('-');
@@ -197,7 +200,7 @@ if(element.id === $(this)[0]){
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
-  // append tooltips showing ranking methodology to titles, courtesey of http://stackoverflow.com/posts/6629864/revisions
+  // append tooltips showing ranking methodology to titles, courtesy of http://stackoverflow.com/posts/6629864/revisions
   function tooltipForNewRank() {
     $('body').append('<div class="tooltip"><div class="tipBody"></div></div>');
     var tip; // make it global
