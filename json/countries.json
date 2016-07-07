@@ -15,10 +15,9 @@
     "TargetRegion" : "APAC"
   },
   {
-    "TargetID":"UK",
+    "TargetID":"GBR",
     "TargetDesc":"United Kingdom",
     "TargetRegion" : "EMEA"
-
   },
   {
     "TargetID":"CAN",

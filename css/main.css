@@ -34,6 +34,11 @@ a {
   clear: left;
 }
 
+.img_blurb .image {
+width:33%;
+padding-right:2%;
+}
+
 .img_blurb .headline,
 .blurb .headline {
   font-weight: bold;
@@ -41,15 +46,12 @@ a {
 
 .image {
   height: 100%;
-  width: 33%;
   float: left;
-  padding-right: 10%;
   padding-bottom: 2%;
 }
 
 .image img {
   width: 100%;
-  padding: 5%
 }
 
 .blurb {
@@ -74,7 +76,7 @@ a {
 }
 
 .headlines {
-  padding-top: 10%;
+  padding-top: 0%;
 }
 
 .headlines a {
@@ -91,7 +93,7 @@ a {
 }
 
 .headlines .headline {
-  padding-top: 15%;
+  padding-bottom: 15%;
 }
 
 .parsed .date {
@@ -133,4 +135,13 @@ a {
   background-color: #eee;
   padding: 5px 10px;
   font-size: 15px;
+}
+
+label sup {
+  line-height: 0px;
+  font-size: 11px;
+  background: yellow;
+  padding: 0px 3px;
+  border-radius: 1px;
+  margin-left: 5px;
 }
